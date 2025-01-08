@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Management;
+using System.Net.NetworkInformation;
 using System.Windows;
 using System.Windows.Threading;
 using LibreHardwareMonitor.Hardware;
@@ -58,7 +59,12 @@ namespace computerComponentsTracker
             // Battery status
             float batteryStatus = GetBatteryStatus();
             batteryProgressBar.Value = batteryStatus;
-            batteryLabel.Text = $"{batteryStatus:F1}%";
+            batteryLabel.Text = $"{batteryStatus:F0}%";
+
+            // Network usage
+            float networkUsage = GetNetworkUsage();
+            batteryProgressBar.Value = networkUsage;
+            batteryLabel.Text = $"{networkUsage:F2} MB/s";
         }
         private float GetTotalRam()
         {
@@ -86,7 +92,7 @@ namespace computerComponentsTracker
         {
             // Use WMI to get battery status
             var searcher = new System.Management.ManagementObjectSearcher("SELECT * FROM Win32_Battery");
-            foreach (ManagementObject obj in searcher.Get())
+            foreach (var obj in searcher.Get())
             {
                 // Get battery status
                 var charge = obj["EstimatedChargeRemaining"];
@@ -96,6 +102,38 @@ namespace computerComponentsTracker
                 }
             }
             return -1;
+        }
+        private float GetNetworkUsage()
+        {
+            try
+            {
+                // Get all network interfaces
+                var networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
+                foreach (var networkInterface in networkInterfaces)
+                {
+                    // Skip virtual adapters (like VMware, VirtualBox, etc.)
+                    if (networkInterface.OperationalStatus == OperationalStatus.Up &&
+                        !networkInterface.Name.Contains("VMnet"))
+                    {
+                        string interfaceName = networkInterface.Name;
+
+                        // Use the interface name in the performance counter
+                        PerformanceCounter bytesSentCounter = new PerformanceCounter("Network Interface", "Bytes Sent/sec", interfaceName);
+                        PerformanceCounter bytesReceivedCounter = new PerformanceCounter("Network Interface", "Bytes Received/sec", interfaceName);
+
+                        // Get network stats
+                        float bytesSent = bytesSentCounter.NextValue();
+                        float bytesReceived = bytesReceivedCounter.NextValue();
+
+                        return (bytesSent + bytesReceived) / (1024 * 1024); // MB/s
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error getting network stats: {ex.Message}");
+            }
+            return 0;
         }
     }
 }
