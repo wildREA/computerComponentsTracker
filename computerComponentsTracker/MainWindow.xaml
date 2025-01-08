@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:computerComponentsTracker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Computer Hardware Tracker" Height="450" Width="800">
     <Grid>
         <!-- Title -->
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,10,0,0">
@@ -18,7 +18,7 @@
         <TextBlock x:Name="cpuUsageLabel" Margin="20,52,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- RAM Usage -->
-        <TextBlock Text="RAM Usage:" Margin="-280,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock Text="RAM Usage:" Margin="-285,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
         <ProgressBar x:Name="ramProgressBar" Height="20" Width="280" Margin="100,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock x:Name="ramUsageLabel" Margin="20,112,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
@@ -26,5 +26,10 @@
         <TextBlock Text="Disk Usage:" Margin="-280,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
         <ProgressBar x:Name="diskProgressBar" Height="20" Width="280" Margin="100,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock x:Name="diskUsageLabel" Margin="20,172,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+
+        <!-- Temperate (Celcius) -->
+        <TextBlock Text="Battery:" Margin="-255,230,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <ProgressBar x:Name="batteryProgressBar" Height="20" Width="280" Margin="100,230,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="batteryLabel" Margin="20,232,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
     </Grid>
 </Window>
