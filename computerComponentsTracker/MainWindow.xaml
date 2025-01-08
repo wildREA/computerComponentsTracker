@@ -1,0 +1,30 @@
+﻿<Window x:Class="computerComponentsTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:computerComponentsTracker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Title -->
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,10,0,0">
+            System Monitor
+        </TextBlock>
+
+        <!-- CPU Usage -->
+        <TextBlock Text="CPU Usage:" Margin="-280,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <ProgressBar x:Name="cpuProgressBar" Height="20" Width="280" Margin="100,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="cpuUsageLabel" Margin="20,52,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+
+        <!-- RAM Usage -->
+        <TextBlock Text="RAM Usage:" Margin="-280,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <ProgressBar x:Name="ramProgressBar" Height="20" Width="280" Margin="100,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ramUsageLabel" Margin="20,112,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+
+        <!-- Disk Usage -->
+        <TextBlock Text="Disk Usage:" Margin="-280,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <ProgressBar x:Name="diskProgressBar" Height="20" Width="280" Margin="100,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="diskUsageLabel" Margin="20,172,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+    </Grid>
+</Window>
