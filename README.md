@@ -59,8 +59,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](/images/screenshot_showcase.jpg)
-
 This is a software application made with .NET as a Window Presentation Form (WPF). The purpose of the software is the display hardware statistics. Although, I realized that I had accidentally made a Task Manager version 2.0.
 Since this is my project, it's of course a better version of Microsoft's poor Task Manager.
 
