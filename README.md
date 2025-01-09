@@ -122,13 +122,30 @@ The native way to use the software is simply visually. Any other features are no
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [x] Add Readme
+- [x] Add Releases
+- [ ] Add Network Usage options;
+    - [ ] Auto (Selects first found active network interface adapter.)
+    - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
+- [ ] Add Light/Dark mode (likely remember setting)
 - [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+    - [ ] (Arabic) العربية
+    - [ ] (Persian) فارسی
+    - [ ] Deutsch (German)
+    - [ ] Ελληνικά (Greek)
+    - [ ] English (UK; if possible)
+    - [ ] Français (French)
+    - [ ] (Hebrew) עברית
+    - [ ] हिंदी (Hindi)
+    - [ ] Italiano (Italian)
+    - [ ] 日本語 (Japanese)
+    - [ ] Lietuvių (Lithuanian)
+    - [ ] Polski (Polish)
+    - [ ] Português (Brasileiro) (Portuguese - Brazilian)
+    - [ ] Русский (Russian)
+    - [ ] ภาษาไทย (Thai)
+    - [ ] 中文 (Chinese)
+    - [ ] (Lebanese) لبناني
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
