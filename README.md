@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/wildREA/computerComponentsTracker">
-    <img src="images/screenshot_showcase.jpg" alt="Logo" width="80" height="80">
+    <img src="images/screenshot_showcase.jpg" alt="Logo" width="auto" height="auto">
   </a>
 
   <h3 align="center">Computer Components Tracker</h3>
