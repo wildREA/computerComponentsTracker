@@ -6,13 +6,6 @@
 [![Unlicense License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/wildREA/computerComponentsTracker">
-    <img src="images/screenshot_showcase.jpg" alt="Logo" width="auto" height="auto">
-  </a>
-
   <h3 align="center">Computer Components Tracker</h3>
 
   <p align="center">
@@ -64,7 +57,7 @@ Since this is my project, it's of course a better version of Microsoft's poor Ta
 Features:
 * All values are displayed in their correct and common formats when looking at their types. (E.g. network usage; sent and received bytes are mostly looked at in MB/s or KB/s.)
 * The values are quite sensitive, so you will likely get "jumpier" spikes in values. Fortunately, that will result in more correct data with an update internal of 1-second.
-* The program is sleek and minimalistic. (I plan to create a kind of theme adjustment (classic Windows XP & modern appearance).)
+* The software is sleek and minimalistic. (I plan to create a kind of theme adjustment (classic Windows XP & modern appearance).)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,14 +81,14 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-_The software does not require a specific .NET Runtime to work. It is a self-contained program._
+_The software does not require a specific .NET Runtime to work. It is self-contained._
 
 1. Get the latest version at [Releases](https://github.com/wildREA/computerComponentsTracker/releases/)
 2. Extract the `.zip` folder's files into a personally preferred location
 3. Run taskmanagerv2.exe
 5. Click `Install`
 
-The program will automatically run after installation, resulting in popping up on your screen. You should be able to see different hardware statistics of your system.
+The software will automatically run after installation, resulting in popping up on your screen. You should be able to see different hardware statistics of your system.
 Do not worry about an Unknown Publisher warning. It usually stems from an unsigned software.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -105,9 +98,14 @@ Do not worry about an Unknown Publisher warning. It usually stems from an unsign
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The native way to use the software is simply visually. Any other features are not a part of the fundamentals for it to work to match the aforementioned purpose of the software.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/wildREA/computerComponentsTracker">
+    <img src="images/screenshot_showcase.jpg" alt="Logo" width="auto" height="auto">
+  </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
