@@ -18,7 +18,7 @@
   <p align="center">
     Also known as, Task Manager 2.0
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/wildREA/computerComponentsTracker"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
