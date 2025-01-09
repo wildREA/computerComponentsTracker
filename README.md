@@ -1,10 +1,9 @@
 <a id="readme-top"></a>
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][https://github.com/wildREA/computerComponentsTracker/graphs/contributors]
+[![Forks][forks-shield]][https://github.com/wildREA/computerComponentsTracker/network/members]
+[![Stargazers][stars-shield]][https://github.com/wildREA/computerComponentsTracker/stargazers]
+[![Issues][issues-shield]][https://github.com/wildREA/computerComponentsTracker/issues]
+[![CC-BY-SA-4.0 License][license-shield]][https://github.com/wildREA/computerComponentsTracker/blob/master/LICENSE.txt]
 
   <h3 align="center">Computer Components Tracker</h3>
 
@@ -31,7 +30,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
