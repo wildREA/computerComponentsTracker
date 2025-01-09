@@ -58,16 +58,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](/images/screenshot_showcase.jpg)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This is a software application made with .NET as a Window Presentation Form (WPF). The purpose of the software is the display hardware statistics. Although, I realized that I had accidentally made a Task Manager version 2.0.
+Since this is my project, it's of course a better version of Microsoft's poor Task Manager.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Features:
+* All values are displayed in their correct and common formats when looking at their types. (E.g. network usage; sent and received bytes are mostly looked at in MB/s or KB/s.)
+* The values are quite sensitive, so you will likely get "jumpier" spikes in values. Fortunately, that will result in more correct data with an update internal of 1-second.
+* The program is sleek and minimalistic. (I plan to create a kind of theme adjustment (classic Windows XP & modern appearance).)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,16 +72,9 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* <a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" width="50" height="50"></a>
+* <a href="https://dotnet.microsoft.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" width="50" height="50"></a>
+* <a href="https://git-scm.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png" width="50" height="50"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
