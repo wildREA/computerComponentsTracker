@@ -13,6 +13,8 @@ namespace computerComponentsTracker
         // Performance counters for CPU and RAM
         private PerformanceCounter cpuCounter;
         private PerformanceCounter ramCounter;
+        private PerformanceCounter bytesSentCounter;
+        private PerformanceCounter bytesReceivedCounter;
 
         // Hardware monitor
         private Computer computer;
@@ -20,9 +22,19 @@ namespace computerComponentsTracker
         {
             InitializeComponent();
 
+            // Get network interface name
+            string networkInterfaceName = GetNetworkInterfaceName();
+
+
             // Initialize performance counters
             cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
             ramCounter = new PerformanceCounter("Memory", "Available MBytes");
+            bytesSentCounter = new PerformanceCounter("Network Interface", "Bytes Sent/sec", networkInterfaceName);
+            bytesReceivedCounter = new PerformanceCounter("Network Interface", "Bytes Received/sec", networkInterfaceName);
+
+            // Get network interface values
+            bytesSentCounter.NextValue();
+            bytesReceivedCounter.NextValue();
 
             // Initialize LibreHardwareMonitor library
             computer = new Computer
@@ -63,13 +75,13 @@ namespace computerComponentsTracker
 
             // Network usage
             float networkUsage = GetNetworkUsage();
-            batteryProgressBar.Value = networkUsage;
-            batteryLabel.Text = $"{networkUsage:F2} MB/s";
+            networkProgressBar.Value = networkUsage;
+            networkLabel.Text = $"{networkUsage:F2} KB/s";
         }
         private float GetTotalRam()
         {
             // Use WMI to get total RAM
-            var searcher = new System.Management.ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem");
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem");
             foreach (var obj in searcher.Get())
             {
                 return Convert.ToSingle(obj["TotalPhysicalMemory"]) / (1024 * 1024 * 1024); // Convert to GB
@@ -79,7 +91,7 @@ namespace computerComponentsTracker
         private float GetDiskUsage()
         {
             // Use WMI to get disk space usage
-            var searcher = new System.Management.ManagementObjectSearcher("SELECT * FROM Win32_LogicalDisk WHERE DriveType = 3");
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_LogicalDisk WHERE DriveType = 3");
             foreach (var disk in searcher.Get())
             {
                 float freeSpace = Convert.ToSingle(disk["FreeSpace"]) / (1024 * 1024 * 1024); // Convert to GB
@@ -91,7 +103,7 @@ namespace computerComponentsTracker
         private int GetBatteryStatus()
         {
             // Use WMI to get battery status
-            var searcher = new System.Management.ManagementObjectSearcher("SELECT * FROM Win32_Battery");
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
             foreach (var obj in searcher.Get())
             {
                 // Get battery status
@@ -103,37 +115,32 @@ namespace computerComponentsTracker
             }
             return -1;
         }
-        private float GetNetworkUsage()
+        private string GetNetworkInterfaceName()
         {
-            try
+            // Get all valid network interface names
+            var category = new PerformanceCounterCategory("Network Interface");
+            string[] instanceNames = category.GetInstanceNames();
+
+            // Use first valid network interface
+            foreach (string name in instanceNames)
             {
-                // Get all network interfaces
-                var networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
-                foreach (var networkInterface in networkInterfaces)
+                if (!string.IsNullOrEmpty(name))
                 {
-                    // Skip virtual adapters (like VMware, VirtualBox, etc.)
-                    if (networkInterface.OperationalStatus == OperationalStatus.Up &&
-                        !networkInterface.Name.Contains("VMnet"))
-                    {
-                        string interfaceName = networkInterface.Name;
-
-                        // Use the interface name in the performance counter
-                        PerformanceCounter bytesSentCounter = new PerformanceCounter("Network Interface", "Bytes Sent/sec", interfaceName);
-                        PerformanceCounter bytesReceivedCounter = new PerformanceCounter("Network Interface", "Bytes Received/sec", interfaceName);
-
-                        // Get network stats
-                        float bytesSent = bytesSentCounter.NextValue();
-                        float bytesReceived = bytesReceivedCounter.NextValue();
-
-                        return (bytesSent + bytesReceived) / (1024 * 1024); // MB/s
-                    }
+                    return name;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error getting network stats: {ex.Message}");
-            }
-            return 0;
+            throw new InvalidOperationException("No active network interface found.");
+        }
+        private float GetNetworkUsage()
+        {
+            // Get network usage in bytes per second
+            float bytesSent = bytesSentCounter.NextValue();
+            float bytesReceived = bytesReceivedCounter.NextValue();
+
+            // Convert to kbps (kilobits per second)
+            float totalBytes = bytesSent + bytesReceived;
+            float totalKbps = (totalBytes) / 1000; // Convert bytes to kilobits
+            return totalKbps;
         }
     }
 }

@@ -14,27 +14,107 @@
 
         <!-- CPU Usage -->
         <TextBlock Text="CPU Usage:" Margin="-280,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
-        <ProgressBar x:Name="cpuProgressBar" Height="20" Width="280" Margin="100,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="cpuProgressBar" Height="20" Width="280" Margin="100,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Setter Property="Foreground" Value="LimeGreen" />
+                    <Style.Triggers>
+                        <!-- Change to Yellow at 80% -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="80">
+                            <Setter Property="Foreground" Value="Yellow" />
+                        </DataTrigger>
+                        <!-- Change to Red at 100% or more -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="100">
+                            <Setter Property="Foreground" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
         <TextBlock x:Name="cpuUsageLabel" Margin="20,52,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- RAM Usage -->
         <TextBlock Text="RAM Usage:" Margin="-285,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
-        <ProgressBar x:Name="ramProgressBar" Height="20" Width="280" Margin="100,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="ramProgressBar" Height="20" Width="280" Margin="100,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Setter Property="Foreground" Value="LimeGreen" />
+                    <Style.Triggers>
+                        <!-- Change to Yellow at 80% -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="80">
+                            <Setter Property="Foreground" Value="Yellow" />
+                        </DataTrigger>
+                        <!-- Change to Red at 100% or more -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="100">
+                            <Setter Property="Foreground" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
         <TextBlock x:Name="ramUsageLabel" Margin="20,112,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Disk Usage -->
         <TextBlock Text="Disk Usage:" Margin="-280,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
-        <ProgressBar x:Name="diskProgressBar" Height="20" Width="280" Margin="100,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="diskProgressBar" Height="20" Width="280" Margin="100,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Setter Property="Foreground" Value="LimeGreen" />
+                    <Style.Triggers>
+                        <!-- Change to Yellow at 80% -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="80">
+                            <Setter Property="Foreground" Value="Yellow" />
+                        </DataTrigger>
+                        <!-- Change to Red at 100% or more -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="100">
+                            <Setter Property="Foreground" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
         <TextBlock x:Name="diskUsageLabel" Margin="20,172,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Temperate (Celcius) -->
         <TextBlock Text="Battery:" Margin="-255,230,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
-        <ProgressBar x:Name="batteryProgressBar" Height="20" Width="280" Margin="100,230,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="batteryProgressBar" Height="20" Width="280" Margin="100,230,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Setter Property="Foreground" Value="LimeGreen" />
+                    <Style.Triggers>
+                        <!-- Change to Yellow at 80% -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="80">
+                            <Setter Property="Foreground" Value="Yellow" />
+                        </DataTrigger>
+                        <!-- Change to Red at 100% or more -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="100">
+                            <Setter Property="Foreground" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
         <TextBlock x:Name="batteryLabel" Margin="20,232,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Network Usage -->
         <TextBlock Text="Network Usage:" Margin="-307,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
-        <ProgressBar x:Name="networkProgressBar" Height="20" Width="280" Margin="100,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBlock x:Name="networkUsageLabel" Margin="20,292,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <ProgressBar x:Name="networkProgressBar" Height="20" Width="280" Margin="100,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Setter Property="Foreground" Value="LimeGreen" />
+                    <Style.Triggers>
+                        <!-- Change to Yellow at 80% -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="80">
+                            <Setter Property="Foreground" Value="Yellow" />
+                        </DataTrigger>
+                        <!-- Change to Red at 100% or more -->
+                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="100">
+                            <Setter Property="Foreground" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
+        <TextBlock x:Name="networkLabel" Margin="20,292,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
     </Grid>
 </Window>
