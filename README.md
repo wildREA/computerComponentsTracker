@@ -133,7 +133,7 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] (Persian) فارسی
     - [ ] Deutsch (German)
     - [ ] Ελληνικά (Greek)
-    - [ ] English (UK; if possible)
+    - [/] English (UK; if possible)
     - [ ] Français (French)
     - [ ] (Hebrew) עברית
     - [ ] हिंदी (Hindi)
