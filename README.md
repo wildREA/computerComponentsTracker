@@ -1,9 +1,21 @@
 <a id="readme-top"></a>
-[![Contributors][contributors-shield]][https://github.com/wildREA/computerComponentsTracker/graphs/contributors]
-[![Forks][forks-shield]][https://github.com/wildREA/computerComponentsTracker/network/members]
-[![Stargazers][stars-shield]][https://github.com/wildREA/computerComponentsTracker/stargazers]
-[![Issues][issues-shield]][https://github.com/wildREA/computerComponentsTracker/issues]
-[![CC-BY-SA-4.0 License][license-shield]][https://github.com/wildREA/computerComponentsTracker/blob/master/LICENSE.txt]
+<p align="center">
+  <a href="https://github.com/wildREA/computerComponentsTracker/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/wildREA/computerComponentsTracker?style=flat-square" alt="Contributors" width="155"/>
+  </a>
+  <a href="https://github.com/wildREA/computerComponentsTracker/network/members">
+    <img src="https://img.shields.io/github/forks/wildREA/computerComponentsTracker?style=flat-square" alt="Forks" width="88"/>
+  </a>
+  <a href="https://github.com/wildREA/computerComponentsTracker/stargazers">
+    <img src="https://img.shields.io/github/stars/wildREA/computerComponentsTracker?style=flat-square" alt="Stars" width="88"/>
+  </a>
+  <a href="https://github.com/wildREA/computerComponentsTracker/issues">
+    <img src="https://img.shields.io/github/issues/wildREA/computerComponentsTracker?style=flat-square" alt="Issues" width="147.5"/>
+  </a>
+  <a href="https://github.com/wildREA/computerComponentsTracker/blob/master/LICENSE.txt">
+    <img src="https://img.shields.io/github/license/wildREA/computerComponentsTracker?style=flat-square" alt="License" width="220"/>
+  </a>
+</p>
 
   <h3 align="center">Computer Components Tracker</h3>
 
