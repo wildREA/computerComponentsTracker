@@ -89,58 +89,21 @@ namespace computerComponentsTracker
         }
         private float GetGpuUsage()
         {
-            // First, check for NVIDIA GPU usage
-            try
+            // Get GPU usage in percentage
+            foreach (var hardware in computer.Hardware)
             {
-                PerformanceCounter gpuCounter = new PerformanceCounter("GPU Engine", "Utilization Percentage", "engtype_3D_0");
-                float gpuUsage = gpuCounter.NextValue(); // Get NVIDIA GPU usage percentage
-                return gpuUsage;
-            }
-            catch (InvalidOperationException)
-            {
-                // If NVIDIA GPU is not found, try to get Intel or AMD GPU usage
-                try
+                if (hardware.HardwareType == HardwareType.GpuNvidia || hardware.HardwareType == HardwareType.GpuAmd || hardware.HardwareType == HardwareType.GpuIntel)
                 {
-                    // Query Intel GPU usage from WMI
-                    var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController WHERE AdapterCompatibility = 'Intel'");
-                    foreach (ManagementObject gpu in searcher.Get())
+                    hardware.Update();
+                    foreach (var sensor in hardware.Sensors)
                     {
-                        // Intel GPUs have no LoadPercentage, but might still query related properties
-                        // Intel GPUs might provide processor clock or other indicators of activity
-                        var load = gpu["CurrentClockSpeed"]; // Example: Using clock speed as indicator (not utilization directly)
-                        if (load != null)
+                        if (sensor.SensorType == SensorType.Load)
                         {
-                            return 0; // Intel GPUs might not directly expose load percentage, return 0 or estimated value
+                            return sensor.Value.GetValueOrDefault();
                         }
                     }
                 }
-                catch (Exception)
-                {
-                    // If querying Intel GPU or the WMI query fails, return 0
-                    return 0;
-                }
-                // Finally, if AMD GPU is found, try fetching its load percentage from WMI
-                try
-                {
-                    var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController WHERE AdapterCompatibility = 'AMD'");
-                    foreach (ManagementObject gpu in searcher.Get())
-                    {
-                        // Similar to Intel, check for available properties ("LoadPercentage" or similar)
-                        var load = gpu["LoadPercentage"];
-                        if (load != null)
-                        {
-                            return Convert.ToSingle(load);
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    // If AMD GPU is not found, return 0
-                    return 0;
-                }
             }
-            // If no GPU found or unable to retrieve usage, return 0
-            Console.WriteLine("No GPUs drivers (NVidia, AMD, Intel) could be found on the system.");
             return 0;
         }
         private float GetTotalRam()
