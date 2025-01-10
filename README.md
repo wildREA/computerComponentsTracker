@@ -91,7 +91,7 @@ To get a local copy up and running follow these simple example steps.
 
 _The software does not require a specific .NET Runtime to work. It is self-contained._
 
-1. Get the latest version at [Releases](https://github.com/wildREA/computerComponentsTracker/releases/)
+1. Get the latest version at [Releases](https://github.com/wildREA/computerComponentsTracker/tags)
 2. Extract the `.zip` folder's files into a personally preferred location
 3. Run taskmanagerv2.exe
 5. Click `Install`
