@@ -144,6 +144,7 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] Português (Brasileiro) (Portuguese - Brazilian)
     - [ ] Русский (Russian)
     - [ ] ภาษาไทย (Thai)
+    - [ ] Türkçe (Turkish)
     - [ ] 中文 (Chinese)
     - [ ] (Lebanese) لبناني
 
@@ -167,12 +168,6 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -180,7 +175,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the Unlicense License. See `LICENSE.txt` for more information.
+Distributed under the CC-BY-SA-4.0 License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,9 +184,9 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+wildREA - [@your_twitter](https://twitter.com/your_username) - wildrealinit@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/wildREA/computerComponentsTracker](https://github.com/wildREA/computerComponentsTracker)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
