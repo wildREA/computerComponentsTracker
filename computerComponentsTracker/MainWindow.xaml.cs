@@ -12,7 +12,6 @@ namespace computerComponentsTracker
     {
         // Performance counters for CPU and RAM
         private PerformanceCounter cpuCounter;
-        private PerformanceCounter gpuCounter;
         private PerformanceCounter ramCounter;
         private PerformanceCounter bytesSentCounter;
         private PerformanceCounter bytesReceivedCounter;
@@ -29,7 +28,6 @@ namespace computerComponentsTracker
 
             // Initialize performance counters
             cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-            gpuCounter = new PerformanceCounter("GPU Engine", "Utilization Percentage", "engtype_3D_0");
             ramCounter = new PerformanceCounter("Memory", "Available MBytes");
             bytesSentCounter = new PerformanceCounter("Network Interface", "Bytes Sent/sec", networkInterfaceName);
             bytesReceivedCounter = new PerformanceCounter("Network Interface", "Bytes Received/sec", networkInterfaceName);
