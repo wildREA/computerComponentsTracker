@@ -144,6 +144,7 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] Português (Brasileiro) (Portuguese - Brazilian)
     - [ ] Русский (Russian)
     - [ ] ภาษาไทย (Thai)
+    - [ ] Türkçe (Turkish)
     - [ ] 中文 (Chinese)
     - [ ] (Lebanese) لبناني
 
