@@ -114,7 +114,7 @@ The native way to use the software is simply visually. Any other features are no
   <a href="https://github.com/wildREA/computerComponentsTracker">
     <img src="images/screenshot_showcase.jpg" alt="Logo" width="auto" height="auto">
   </a>
-
+</div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -127,6 +127,7 @@ The native way to use the software is simply visually. Any other features are no
 - [ ] Add Network Usage options;
     - [ ] Auto (Selects first found active network interface adapter.)
     - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
+- [ ] Add GPU Usage Tracker
 - [ ] Add Light/Dark mode (likely remember setting)
 - [ ] Multi-language Support
     - [ ] (Arabic) العربية
