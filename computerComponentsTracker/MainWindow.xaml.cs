@@ -75,16 +75,17 @@ namespace computerComponentsTracker
             diskUsageLabel.Text = $"{diskUsage:F1}%";
 
             // Battery level
-            int batteryLevel = GetBatteryLevel();
+            bool isCharging;
+            int batteryLevel = GetBatteryLevel(out isCharging); // Pass 'out charging' to get charging status
             if (batteryLevel >= 0)
             {
                 batteryProgressBar.Value = batteryLevel;
-                batteryLabel.Text = $"{batteryLevel}%";
+                batteryLabel.Text = isCharging ? $"{batteryLevel} (Charging)" : $"{batteryLevel}%";
             }
             else
             {
-                batteryProgressBar.Value = 0; // Keep at 0 if no value exist
-                batteryLabel.Text = "No battery found on your system"; // Display string if negative values exist
+                batteryProgressBar.Value = 0;
+                batteryLabel.Text = "No battery found on your system";
             }
 
             // Network usage
@@ -134,19 +135,33 @@ namespace computerComponentsTracker
             }
             return 0;
         }
-        private int GetBatteryLevel()
+        private int GetBatteryLevel(out bool isCharging)
         {
+            isCharging = false;
+
             // Use WMI to get battery status
             var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
-            foreach (var level in searcher.Get())
+            var batteryCollection = searcher.Get();
+
+            if (batteryCollection.Count == 0)
             {
-                // Get battery status
+                // No battery found (likely desktop system)
+                return -1;
+            }
+            // If battery exist
+            foreach (var level in batteryCollection)
+            {
                 var charge = level["EstimatedChargeRemaining"];
+                var status = level["BatteryStatus"];
+
+                // Return charge as int if exist
                 if (charge != null)
                 {
+                    isCharging = status != null && Convert.ToInt32(status) == 2; // Charging status as 2
                     return Convert.ToInt32(charge);
                 }
             }
+            // If no charge found
             return -1;
         }
         private string GetNetworkInterfaceName()
