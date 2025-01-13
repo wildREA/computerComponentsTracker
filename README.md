@@ -91,7 +91,7 @@ To get a local copy up and running follow these simple example steps.
 
 _The software does not require a specific .NET Runtime to work. It is self-contained._
 
-1. Get the latest version at [Releases](https://github.com/wildREA/computerComponentsTracker/releases/)
+1. Get the latest version at [Releases](https://github.com/wildREA/computerComponentsTracker/tags)
 2. Extract the `.zip` folder's files into a personally preferred location
 3. Run taskmanagerv2.exe
 5. Click `Install`
@@ -114,7 +114,7 @@ The native way to use the software is simply visually. Any other features are no
   <a href="https://github.com/wildREA/computerComponentsTracker">
     <img src="images/screenshot_showcase.jpg" alt="Logo" width="auto" height="auto">
   </a>
-
+</div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -124,9 +124,10 @@ The native way to use the software is simply visually. Any other features are no
 
 - [x] Add Readme
 - [x] Add Releases
-- [ ] Add Network Usage options;
-    - [ ] Auto (Selects first found active network interface adapter.)
+- [/] Add Network Usage options;
+    - [X] Auto (Selects first found active network interface adapter.)
     - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
+- [x] Add GPU Usage Tracker
 - [ ] Add Light/Dark mode (likely remember setting)
 - [ ] Multi-language Support
     - [ ] (Arabic) العربية
