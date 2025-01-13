@@ -120,6 +120,7 @@
             </ProgressBar.Style>
         </ProgressBar>
         <TextBlock x:Name="batteryLabel" Margin="20,292,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="batteryStatusLabel" Margin="0,315,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
 
         <!-- Network Usage -->
         <TextBlock Text="Network Usage:" Margin="-307,350,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>

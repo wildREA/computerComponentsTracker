@@ -75,18 +75,9 @@ namespace computerComponentsTracker
             diskUsageLabel.Text = $"{diskUsage:F1}%";
 
             // Battery level
-            bool isCharging;
-            int batteryLevel = GetBatteryLevel(out isCharging); // Pass 'out charging' to get charging status
-            if (batteryLevel >= 0)
-            {
-                batteryProgressBar.Value = batteryLevel;
-                batteryLabel.Text = isCharging ? $"{batteryLevel} (Charging)" : $"{batteryLevel}%";
-            }
-            else
-            {
-                batteryProgressBar.Value = 0;
-                batteryLabel.Text = "No battery found on your system";
-            }
+            var batteryInfo = GetBatteryLevel();
+            batteryProgressBar.Value = (int)batteryInfo.Level; // Battery level (percentage)
+            batteryLabel.Text = $"{batteryInfo.Level:F0}% {batteryInfo.Status}";
 
             // Network usage
             float networkUsage = GetNetworkUsage();
@@ -135,35 +126,29 @@ namespace computerComponentsTracker
             }
             return 0;
         }
-        private int GetBatteryLevel(out bool isCharging)
+        private (float Level, string Status) GetBatteryLevel()
         {
-            isCharging = false;
-
-            // Use WMI to get battery status
-            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
-            var batteryCollection = searcher.Get();
-
-            if (batteryCollection.Count == 0)
+            try
             {
-                // No battery found (likely desktop system)
-                return -1;
-            }
-            // If battery exist
-            foreach (var level in batteryCollection)
-            {
-                var charge = level["EstimatedChargeRemaining"];
-                var status = level["BatteryStatus"];
-
-                // Return charge as int if exist
-                if (charge != null)
+                // Use WMI to get battery status
+                var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
+                foreach (var battery in searcher.Get())
                 {
-                    isCharging = status != null && Convert.ToInt32(status) == 2; // Charging status as 2
-                    return Convert.ToInt32(charge);
+                    float level = Convert.ToSingle(battery["EstimatedChargeRemaining"] ?? 0);
+                    bool isCharging = battery["BatteryStatus"]?.ToString() == "2"; // 2 indicates charging
+
+                    string status = isCharging ? "(Charging)" : string.Empty;
+                    return (level, status);
                 }
             }
-            // If no charge found
-            return -1;
+            catch (Exception ex)
+            {
+                // Log or handle exception here
+                Console.WriteLine($"Error retrieving battery status: {ex.Message}");
+            }
+            return (0, "No battery found");
         }
+        // GetBatteryLevel METHOD HERE (charging, not charging, has even battery (if desktop)?)
         private string GetNetworkInterfaceName()
         {
             // Get all valid network interface names
