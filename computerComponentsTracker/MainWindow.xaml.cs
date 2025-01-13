@@ -74,10 +74,18 @@ namespace computerComponentsTracker
             diskProgressBar.Value = diskUsage;
             diskUsageLabel.Text = $"{diskUsage:F1}%";
 
-            // Battery status
-            float batteryStatus = GetBatteryStatus();
-            batteryProgressBar.Value = batteryStatus;
-            batteryLabel.Text = $"{batteryStatus:F0}%";
+            // Battery level
+            int batteryLevel = GetBatteryLevel();
+            if (batteryLevel >= 0)
+            {
+                batteryProgressBar.Value = batteryLevel;
+                batteryLabel.Text = $"{batteryLevel}%";
+            }
+            else
+            {
+                batteryProgressBar.Value = 0; // Keep at 0 if no value exist
+                batteryLabel.Text = "No battery found on your system"; // Display string if negative values exist
+            }
 
             // Network usage
             float networkUsage = GetNetworkUsage();
@@ -126,7 +134,7 @@ namespace computerComponentsTracker
             }
             return 0;
         }
-        private int GetBatteryStatus()
+        private int GetBatteryLevel()
         {
             // Use WMI to get battery status
             var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
