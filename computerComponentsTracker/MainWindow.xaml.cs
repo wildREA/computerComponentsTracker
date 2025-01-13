@@ -173,7 +173,7 @@ namespace computerComponentsTracker
 
             // Convert to kbps (kilobits per second)
             float totalBytes = bytesSent + bytesReceived;
-            float totalKbps = (totalBytes) / 1000; // Convert bytes to kilobits
+            float totalKbps = (totalBytes * 8) / 1000; // Convert bytes to kilobits
             return totalKbps;
         }
     }
