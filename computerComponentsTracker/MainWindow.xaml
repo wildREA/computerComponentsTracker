@@ -13,22 +13,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
-
-
-
-
-
-
-
         <ContentControl x:Name="MainContent" Grid.Column="0"/>
-
-        <Grid Grid.Column="1" Background="Red">
-            <TextBlock TextWrapping="Wrap" Text="Your navigation panel goes here" />
+        <Grid Grid.Column="1">
+            <TextBlock TextWrapping="Wrap" Text="Your navigation panel goes here"/>
             <Button Content="Settings" Click="SettingsButton_Click" />
-
-
         </Grid>
-        
-
     </Grid>
 </Window>
