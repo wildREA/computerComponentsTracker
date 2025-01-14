@@ -10,6 +10,12 @@ namespace computerComponentsTracker
 {
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+            InitializeComponentPage(); // Run as default
+        }
+
         // Performance counters for CPU and RAM
         private PerformanceCounter cpuCounter;
         private PerformanceCounter ramCounter;
@@ -18,9 +24,10 @@ namespace computerComponentsTracker
 
         // Hardware monitor
         private Computer computer;
-        public MainWindow()
+
+        private void InitializeComponentPage()
         {
-            InitializeComponent();
+            ComponentUsage ComponentUsage = new ComponentUsage();
 
             // Get network interface name
             string networkInterfaceName = GetNetworkInterfaceName();
@@ -43,47 +50,63 @@ namespace computerComponentsTracker
                 IsGpuEnabled = true
             };
             computer.Open();
+            MainContent.Content = ComponentUsage;
 
             // Set up timer to update stats every second
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += UpdateSystemStats;
+            timer.Tick += (sender, e) => UpdateSystemStats(ComponentUsage);
             timer.Start();
         }
-        private void UpdateSystemStats(object? sender, EventArgs e)
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            // CPU usage
-            float cpuUsage = cpuCounter.NextValue();
-            cpuProgressBar.Value = cpuUsage;
-            cpuUsageLabel.Text = $"{cpuUsage:F1}%";
+            InitializeSettingsPage();
+        }
 
-            // GPU usage
-            float gpuUsage = GetGpuUsage();
-            gpuProgressBar.Value = gpuUsage;
-            gpuUsageLabel.Text = $"{gpuUsage:F1}%";
+        private void InitializeSettingsPage()
+        {
+            Settings settingsPage = new Settings();
+            MainContent.Content = settingsPage;
+        }
 
-            // RAM usage
-            float availableRam = ramCounter.NextValue() / 1024; // Convert to GB
-            float totalRam = GetTotalRam();
-            float ramUsage = totalRam - availableRam;
-            ramProgressBar.Value = (ramUsage / totalRam) * 100;
-            ramUsageLabel.Text = $"{ramUsage:F1} GB / {totalRam:F1} GB";
+        private void UpdateSystemStats(ComponentUsage componentUsage)
+        {
+            if (MainContent.Content == componentUsage) // For optimization
+            {
+                // CPU usage
+                float cpuUsage = cpuCounter.NextValue();
+                componentUsage.cpuProgressBar.Value = cpuUsage;
+                componentUsage.cpuUsageLabel.Text = $"{cpuUsage:F1}%";
 
-            // Disk usage
-            float diskUsage = GetDiskUsage();
-            diskProgressBar.Value = diskUsage;
-            diskUsageLabel.Text = $"{diskUsage:F1}%";
+                // GPU usage
+                float gpuUsage = GetGpuUsage();
+                componentUsage.gpuProgressBar.Value = gpuUsage;
+                componentUsage.gpuUsageLabel.Text = $"{gpuUsage:F1}%";
 
-            // Battery level
-            var batteryInfo = GetBatteryLevel();
-            batteryProgressBar.Value = (int)batteryInfo.Level; // Battery level (percentage)
-            batteryLabel.Text = $"{batteryInfo.Level:F0}% {batteryInfo.Status}";
+                // RAM usage
+                float availableRam = ramCounter.NextValue() / 1024; // Convert to GB
+                float totalRam = GetTotalRam();
+                float ramUsage = totalRam - availableRam;
+                componentUsage.ramProgressBar.Value = (ramUsage / totalRam) * 100;
+                componentUsage.ramUsageLabel.Text = $"{ramUsage:F1} GB / {totalRam:F1} GB";
 
-            // Network usage
-            float networkUsage = GetNetworkUsage();
-            networkProgressBar.Value = networkUsage;
-            networkLabel.Text = $"{networkUsage:F2} KB/s";
-            networkInterfaceNameActive.Text = $"Network Interface: {GetNetworkInterfaceName()}";
+                // Disk usage
+                float diskUsage = GetDiskUsage();
+                componentUsage.diskProgressBar.Value = diskUsage;
+                componentUsage.diskUsageLabel.Text = $"{diskUsage:F1}%";
+
+                // Battery level
+                var batteryInfo = GetBatteryLevel();
+                componentUsage.batteryProgressBar.Value = (int)batteryInfo.Level; // Battery level (percentage)
+                componentUsage.batteryLabel.Text = $"{batteryInfo.Level:F0}% {batteryInfo.Status}";
+
+                // Network usage
+                float networkUsage = GetNetworkUsage();
+                componentUsage.networkProgressBar.Value = networkUsage;
+                componentUsage.networkLabel.Text = $"{networkUsage:F2} KB/s";
+                componentUsage.networkInterfaceNameActive.Text = $"Network Interface: {GetNetworkInterfaceName()}";
+            }
         }
         private float GetGpuUsage()
         {
