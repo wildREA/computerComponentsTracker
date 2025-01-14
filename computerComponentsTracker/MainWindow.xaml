@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:computerComponentsTracker"
         mc:Ignorable="d"
-        Title="Computer Hardware Tracker" Height="450" Width="800"
+        Title="Computer Hardware Tracker" Height="475" Width="800"
+        MinHeight="475" MinWidth="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- Title -->
@@ -142,5 +143,7 @@
         </ProgressBar>
         <TextBlock x:Name="networkLabel" Margin="20,352,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
         <TextBlock x:Name="networkInterfaceNameActive" Margin="0,375,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+
+        <TextBlock Text="If the network adapter is not correct, restart the software" Foreground="#7a7a7a" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14"/>
     </Grid>
 </Window>

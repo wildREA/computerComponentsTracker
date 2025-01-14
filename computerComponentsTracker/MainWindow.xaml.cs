@@ -128,23 +128,15 @@ namespace computerComponentsTracker
         }
         private (float Level, string Status) GetBatteryLevel()
         {
-            try
+            // Use WMI to get battery status
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
+            foreach (var battery in searcher.Get())
             {
-                // Use WMI to get battery status
-                var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Battery");
-                foreach (var battery in searcher.Get())
-                {
-                    float level = Convert.ToSingle(battery["EstimatedChargeRemaining"] ?? 0);
-                    bool isCharging = battery["BatteryStatus"]?.ToString() == "2"; // 2 indicates charging
+                float level = Convert.ToSingle(battery["EstimatedChargeRemaining"] ?? 0);
+                bool isCharging = battery["BatteryStatus"]?.ToString() == "2"; // 2 indicates charging
 
-                    string status = isCharging ? "(Charging)" : string.Empty;
-                    return (level, status);
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log or handle exception here
-                Console.WriteLine($"Error retrieving battery status: {ex.Message}");
+                string status = isCharging ? "(Charging)" : string.Empty;
+                return (level, status);
             }
             return (0, "No battery found");
         }
