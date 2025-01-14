@@ -24,7 +24,6 @@ namespace computerComponentsTracker
 
         // Hardware monitor
         private Computer computer;
-
         private void InitializeComponentPage()
         {
             ComponentUsage ComponentUsage = new ComponentUsage();
@@ -58,18 +57,15 @@ namespace computerComponentsTracker
             timer.Tick += (sender, e) => UpdateSystemStats(ComponentUsage);
             timer.Start();
         }
-
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             InitializeSettingsPage();
         }
-
         private void InitializeSettingsPage()
         {
             Settings settingsPage = new Settings();
             MainContent.Content = settingsPage;
         }
-
         private void UpdateSystemStats(ComponentUsage componentUsage)
         {
             if (MainContent.Content == componentUsage) // For optimization
@@ -163,7 +159,6 @@ namespace computerComponentsTracker
             }
             return (0, "No battery found");
         }
-        // GetBatteryLevel METHOD HERE (charging, not charging, has even battery (if desktop)?)
         private string GetNetworkInterfaceName()
         {
             // Get all valid network interface names
