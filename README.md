@@ -149,8 +149,6 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] 中文 (Chinese)
     - [ ] (Lebanese) لبناني
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
