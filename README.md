@@ -185,7 +185,7 @@ Distributed under the CC-BY-SA-4.0 License. See `LICENSE.txt` for more informati
 <!-- CONTACT -->
 ## Contact
 
-wildREA - [@your_twitter](https://twitter.com/your_username) - wildrealinit@example.com
+wildREA - wildrealinit@example.com
 
 Project Link: [https://github.com/wildREA/computerComponentsTracker](https://github.com/wildREA/computerComponentsTracker)
 
