@@ -5,6 +5,7 @@ using System.Net.NetworkInformation;
 using System.Windows;
 using System.Windows.Threading;
 using LibreHardwareMonitor.Hardware;
+using Microsoft.Windows.Themes;
 
 namespace computerComponentsTracker
 {
@@ -57,11 +58,12 @@ namespace computerComponentsTracker
             timer.Tick += (sender, e) => UpdateSystemStats(ComponentUsage);
             timer.Start();
         }
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        private void MonitorButton_Click(object sender, RoutedEventArgs e)
         {
-            InitializeSettingsPage();
+            ComponentUsage monitorPage = new ComponentUsage();
+            MainContent.Content = monitorPage;
         }
-        private void InitializeSettingsPage()
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             Settings settingsPage = new Settings();
             MainContent.Content = settingsPage;
@@ -177,6 +179,10 @@ namespace computerComponentsTracker
         }
         private float GetNetworkUsage()
         {
+            if (bytesReceivedCounter == null || bytesSentCounter == null)
+            {
+                return 0;
+            }
             // Get network usage in bytes per second
             float bytesSent = bytesSentCounter.NextValue();
             float bytesReceived = bytesReceivedCounter.NextValue();
