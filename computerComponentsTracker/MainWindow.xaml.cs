@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Management;
 using System.Net.NetworkInformation;
 using System.Windows;
+using System.Windows.Data;
+using System.Windows.Media;
 using System.Windows.Threading;
 using LibreHardwareMonitor.Hardware;
 using Microsoft.Windows.Themes;

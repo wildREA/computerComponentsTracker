@@ -11,7 +11,7 @@
     <Grid Grid.Column="0" Background="#f7f7f7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.3*"/>
         </Grid.ColumnDefinitions>
         <ContentControl x:Name="MainContent" Grid.Column="0"/>
         <Grid Grid.Column="1">
@@ -20,13 +20,15 @@
                 <RowDefinition Height="0.7*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <TextBlock Text="Test" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="0,10,0,0"/>
-                <Image Source="Images/Logo.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0"/>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Task Manager" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBlock Text="2.0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+                </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
-                <StackPanel>
-                    <Button Content="Monitor" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="30"/>
-                    <Button Content="Settings" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="30"/>
+                <StackPanel Margin="0,25,0,0">
+                    <Button Content="Monitor" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="35" FontSize="16"/>
+                    <Button Content="Settings" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="35" FontSize="16"/>
                 </StackPanel>
             </Grid>
         </Grid>
