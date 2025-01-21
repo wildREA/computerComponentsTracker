@@ -30,7 +30,6 @@ namespace computerComponentsTracker
 
         private void MonitorButton_Click(object sender, RoutedEventArgs e)
         {
-            ComponentUsage componentUsage = new ComponentUsage();
             MainContent.Content = componentUsage;
         }
 

@@ -31,5 +31,9 @@ namespace computerComponentsTracker
             refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
         }
 
+        //private void ApplyButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    ComponentUsage componentUsage = new ComponentUsage();
+        //}
     }
 }

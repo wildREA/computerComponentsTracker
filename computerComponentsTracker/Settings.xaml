@@ -33,6 +33,7 @@
                 <ComboBoxItem Content="Seconds"/>
                 <ComboBoxItem Content="Milliseconds"/>
             </ComboBox>
+            <Button Content="APPLY" Click="ApplyButton_Click" Background="#96bbfa" BorderBrush="#708ab8" BorderThickness="1" HorizontalAlignment="Center" Margin="450,30,0,0" Width="70" Height="25" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
     </Grid>
 </UserControl>
