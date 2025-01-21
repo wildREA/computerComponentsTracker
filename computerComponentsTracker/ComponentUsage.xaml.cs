@@ -65,12 +65,34 @@ namespace computerComponentsTracker
             computer.Open();
         }
 
-        private void StartTimer()
+        public void StartTimer()
         {
-            timer = new DispatcherTimer
+            Debug.WriteLine(Settings.refreshRate);
+            switch (Settings.refreshRate)
             {
-                Interval = TimeSpan.FromMicroseconds(1)
-            };
+                case "Milliseconds":
+                    Debug.WriteLine("Changing to milliseconds");
+                    timer = new DispatcherTimer
+                    {
+                        Interval = TimeSpan.FromMilliseconds(10)
+                    };
+                    Debug.WriteLine("Changed to milliseconds");
+                    break;
+                case "Seconds":
+                    Debug.WriteLine("Changing to seconds");
+                    timer = new DispatcherTimer
+                    {
+                        Interval = TimeSpan.FromSeconds(1)
+                    };
+                    Debug.WriteLine("Changed to seconds");
+                    break;
+                default:
+                    timer = new DispatcherTimer
+                    {
+                        Interval = TimeSpan.FromSeconds(1)
+                    };
+                    break;
+            }
             timer.Tick += (sender, e) => UpdateSystemStats();
             timer.Start();
         }
@@ -180,7 +202,7 @@ namespace computerComponentsTracker
 
             foreach (var name in instanceNames)
             {
-                if (!string.IsNullOrEmpty(name))
+                if (!string.IsNullOrEmpty(name) && !name.Contains("vmnet", StringComparison.OrdinalIgnoreCase) && !name.Contains("Virtual", StringComparison.OrdinalIgnoreCase))
                 {
                     return name;
                 }
@@ -190,10 +212,11 @@ namespace computerComponentsTracker
 
         private string GetNetworkInterfaceNameByType(NetworkInterfaceType type)
         {
-            // Get first active network interface of specified type
             foreach (var ni in NetworkInterface.GetAllNetworkInterfaces())
             {
-                if (ni.NetworkInterfaceType == type && ni.OperationalStatus == OperationalStatus.Up)
+                if (ni.NetworkInterfaceType == type && ni.OperationalStatus == OperationalStatus.Up &&
+                    !ni.Description.Contains("vmnet", StringComparison.OrdinalIgnoreCase) &&
+                    !ni.Description.Contains("Virtual", StringComparison.OrdinalIgnoreCase))
                 {
                     return ni.Name;
                 }
@@ -223,23 +246,6 @@ namespace computerComponentsTracker
                 "Ethernet" => GetNetworkInterfaceNameByType(NetworkInterfaceType.Ethernet),
                 "Wi-Fi" => GetNetworkInterfaceNameByType(NetworkInterfaceType.Wireless80211),
                 _ => GetNetworkInterfaceName()
-            };
-        }
-
-        public void SetNetworkAdapter(string networkAdapter)
-        {
-            // Set network adapter based on user selection
-            selectedNetworkAdapter = networkAdapter;
-            InitializePerformanceCounters();
-        }
-
-        public void SetRefreshRate(string refreshRate)
-        {
-            // Set timer interval based on user selection
-            timer.Interval = refreshRate switch
-            {
-                "Millisecond" => TimeSpan.FromMilliseconds(100),
-                _ => TimeSpan.FromSeconds(1)
             };
         }
     }
