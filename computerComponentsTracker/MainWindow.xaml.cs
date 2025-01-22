@@ -4,7 +4,7 @@ namespace computerComponentsTracker
 {
     public partial class MainWindow : Window
     {
-        private ComponentUsage componentUsage;
+        public static ComponentUsage componentUsage;
         public Settings settings;
 
         public MainWindow()
