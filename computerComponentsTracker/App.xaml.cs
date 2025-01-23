@@ -1,14 +1,15 @@
-﻿using System.Configuration;
-using System.Data;
+﻿using System;
+using System.Collections;
+using System.Globalization;
+using System.Resources;
 using System.Windows;
 
-namespace computerComponentsTracker
+public partial class App : Application
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    public void ChangeLanguage(string languageCode)
     {
-    }
-
+        CultureInfo culture = new CultureInfo(languageCode);
+        Thread.CurrentThread.CurrentCulture = culture;
+        Thread.CurrentThread.CurrentUICulture = culture;
+        }
 }

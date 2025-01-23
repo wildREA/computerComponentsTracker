@@ -20,16 +20,6 @@
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
                     <Setter Property="Foreground" Value="LimeGreen"/>
-                    <Style.Triggers>
-                        <!-- Change to Yellow at 70% -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="70.0">
-                            <Setter Property="Foreground" Value="Yellow"/>
-                        </DataTrigger>
-                        <!-- Change to Red at 90% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="90.0">
-                            <Setter Property="Foreground" Value="Red"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
@@ -41,16 +31,6 @@
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
                     <Setter Property="Foreground" Value="LimeGreen"/>
-                    <Style.Triggers>
-                        <!-- Change to Yellow at 70% -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="70.0">
-                            <Setter Property="Foreground" Value="Yellow"/>
-                        </DataTrigger>
-                        <!-- Change to Red at 90% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="90.0">
-                            <Setter Property="Foreground" Value="Red"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
@@ -62,16 +42,6 @@
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
                     <Setter Property="Foreground" Value="LimeGreen"/>
-                    <Style.Triggers>
-                        <!-- Change to Yellow at 70% -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="70.0">
-                            <Setter Property="Foreground" Value="Yellow"/>
-                        </DataTrigger>
-                        <!-- Change to Red at 90% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="90.0">
-                            <Setter Property="Foreground" Value="Red"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
@@ -83,16 +53,6 @@
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
                     <Setter Property="Foreground" Value="LimeGreen"/>
-                    <Style.Triggers>
-                        <!-- Change to Yellow at 70% -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="70.0">
-                            <Setter Property="Foreground" Value="Yellow"/>
-                        </DataTrigger>
-                        <!-- Change to Red at 90% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="90.0">
-                            <Setter Property="Foreground" Value="Red"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
@@ -103,20 +63,6 @@
         <ProgressBar x:Name="batteryProgressBar" Height="20" Width="280" Margin="100,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
-                    <Style.Triggers>
-                        <!-- Change to Red at 0% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="0.0">
-                            <Setter Property="Foreground" Value="Red"/>
-                        </DataTrigger>
-                        <!-- Change to Yellow at 10% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="10.0">
-                            <Setter Property="Foreground" Value="Yellow"/>
-                        </DataTrigger>
-                        <!-- Change to Red at 30% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="30.0">
-                            <Setter Property="Foreground" Value="LimeGreen"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
@@ -128,16 +74,6 @@
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
                     <Setter Property="Foreground" Value="LimeGreen"/>
-                    <Style.Triggers>
-                        <!-- Change to Yellow at 50% -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="50.0">
-                            <Setter Property="Foreground" Value="Yellow"/>
-                        </DataTrigger>
-                        <!-- Change to Red at 80% or more -->
-                        <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="80.0">
-                            <Setter Property="Foreground" Value="Red"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>

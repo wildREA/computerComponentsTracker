@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using computerComponentsTracker;
 
 namespace computerComponentsTracker
 {
@@ -29,6 +30,14 @@ namespace computerComponentsTracker
         private void refreshRateChanged(object sender, SelectionChangedEventArgs e)
         {
             refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+        }
+
+        private void OnLanguageChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string? selectedLanguage = ((ComboBoxItem?)e.AddedItems[0]).Tag.ToString();
+            Debug.WriteLine(selectedLanguage);
+            //App.ChangeLanguage(selectedLanguage);
+            //((App)Application.Current).ChangeLanguage(selectedLanguage);
         }
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)

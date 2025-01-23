@@ -1,4 +1,7 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using System.Threading;
+using System.Globalization;
 
 namespace computerComponentsTracker
 {

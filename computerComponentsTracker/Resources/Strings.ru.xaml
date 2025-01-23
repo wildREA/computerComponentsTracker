@@ -3,10 +3,10 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="SettingsTitle">Настройки</sys:String>
     <sys:String x:Key="ChangeSettings">Измените настройки приложения</sys:String>
-    <sys:String x:Key="ChangeTheme">Изменить тему</sys:String>
-    <sys:String x:Key="ChangeLanguage">Изменить язык</sys:String>
-    <sys:String x:Key="ChangeNetworkAdapter">Изменить сетевой адаптер</sys:String>
-    <sys:String x:Key="ChangeRefreshRate">Изменить частоту обновления</sys:String>
+    <sys:String x:Key="ChangeTheme">Тема</sys:String>
+    <sys:String x:Key="ChangeLanguage">Язык</sys:String>
+    <sys:String x:Key="ChangeNetworkAdapter">Сетевой адаптер</sys:String>
+    <sys:String x:Key="ChangeRefreshRate">Частоту обновления</sys:String>
     <sys:String x:Key="LightTheme">Светлая</sys:String>
     <sys:String x:Key="DarkTheme">Темная</sys:String>
     <sys:String x:Key="EnglishLanguage">Английский</sys:String>
