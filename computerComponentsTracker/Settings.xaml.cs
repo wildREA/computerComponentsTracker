@@ -26,7 +26,7 @@ namespace computerComponentsTracker
     public partial class Settings : UserControl
     {
         public static string refreshRate;
-
+        // asd
         public Settings()
         {
             InitializeComponent();
