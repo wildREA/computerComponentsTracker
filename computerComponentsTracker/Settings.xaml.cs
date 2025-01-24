@@ -16,6 +16,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using computerComponentsTracker;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.Extensions.DependencyInjection;
+using computerComponentsTracker;
+using static App;
 
 namespace computerComponentsTracker
 {
@@ -36,8 +40,10 @@ namespace computerComponentsTracker
         {
             string? selectedLanguage = ((ComboBoxItem?)e.AddedItems[0]).Tag.ToString();
             Debug.WriteLine(selectedLanguage);
-            //App.ChangeLanguage(selectedLanguage);
-            //((App)Application.Current).ChangeLanguage(selectedLanguage);
+
+            // Access ChangeLanguage method via DI
+            var languageService = (IAppLanguageServices)App.ServiceProvider.GetService(typeof(IAppLanguageServices));
+            languageService?.ChangeLanguage(selectedLanguage);
         }
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
