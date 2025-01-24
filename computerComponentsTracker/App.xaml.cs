@@ -9,7 +9,6 @@ using static App;
 public partial class App : Application, IAppLanguageServices
 {
     public interface IAppLanguageServices
-        // uuuu
     {
         void ChangeLanguage(string language);
     }
