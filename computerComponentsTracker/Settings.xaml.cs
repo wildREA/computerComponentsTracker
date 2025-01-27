@@ -1,24 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Windows;
+using System.Diagnostics;
 using System.Windows.Controls;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using computerComponentsTracker;
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.DependencyInjection;
-using computerComponentsTracker;
 using static App;
 
 namespace computerComponentsTracker
@@ -26,11 +10,14 @@ namespace computerComponentsTracker
     public partial class Settings : UserControl
     {
         public static string refreshRate;
+        private readonly IAppLanguageServices _languageService;
 
-        public Settings()
+        public Settings(IAppLanguageServices languageService)
         {
             InitializeComponent();
+            _languageService = languageService ?? throw new ArgumentNullException(nameof(languageService));
         }
+
         private void refreshRateChanged(object sender, SelectionChangedEventArgs e)
         {
             refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
@@ -38,12 +25,13 @@ namespace computerComponentsTracker
 
         private void OnLanguageChanged(object sender, SelectionChangedEventArgs e)
         {
-            string? selectedLanguage = ((ComboBoxItem?)e.AddedItems[0]).Tag.ToString();
-            Debug.WriteLine(selectedLanguage);
+            string? selectedLanguage = ((ComboBoxItem?)e.AddedItems[0])?.Tag?.ToString();
+            Debug.WriteLine($"Selected Language: {selectedLanguage}");
 
-            // Access ChangeLanguage method via DI
-            var languageService = (IAppLanguageServices)App.ServiceProvider.GetService(typeof(IAppLanguageServices));
-            languageService?.ChangeLanguage(selectedLanguage);
+            if (string.IsNullOrEmpty(selectedLanguage))
+                return;
+
+            _languageService.ChangeLanguage(selectedLanguage);
         }
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)

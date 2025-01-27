@@ -1,48 +1,59 @@
 ﻿using System;
-using System.Globalization;
-using System.Resources;
 using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
+using System.Resources;
 using System.Diagnostics;
-using static App;
+using System.Globalization;
+using Microsoft.Extensions.DependencyInjection;
+using computerComponentsTracker;
 
-public partial class App : Application, IAppLanguageServices
+public partial class App : Application
 {
     public interface IAppLanguageServices
     {
         void ChangeLanguage(string language);
     }
 
-    public void ChangeLanguage(string language)
+    public class AppLanguageServices : IAppLanguageServices
     {
-        // Clear existing dictionaries
-        Resources.MergedDictionaries.Clear();
+        private readonly Application _application;
 
-        // Load default language
-        var defaultDict = new ResourceDictionary { Source = new Uri("Resources/Strings.xaml", UriKind.Relative) };
-        Resources.MergedDictionaries.Add(defaultDict);
-
-        // Load selected language
-        if (language == "ru-RU")
+        public AppLanguageServices(Application application)
         {
-            var russianDict = new ResourceDictionary { Source = new Uri("Resources/Strings.ru.xaml", UriKind.Relative) };
-            Resources.MergedDictionaries.Add(russianDict);
+            _application = application;
+        }
+
+        public void ChangeLanguage(string language)
+        {
+            _application.Resources.MergedDictionaries.Clear();
+
+            var defaultDict = new ResourceDictionary { Source = new Uri("Resources/Strings.xaml", UriKind.Relative) };
+            _application.Resources.MergedDictionaries.Add(defaultDict);
+
+            if (language == "ru-RU")
+            {
+                var russianDict = new ResourceDictionary { Source = new Uri("Resources/Strings.ru.xaml", UriKind.Relative) };
+                _application.Resources.MergedDictionaries.Add(russianDict);
+            }
         }
     }
 
     // Static ServiceProvider
-    public static IServiceProvider ServiceProvider { get; private set; }
+    public static IServiceProvider? ServiceProvider { get; set; }
 
     protected override void OnStartup(StartupEventArgs e)
     {
         var serviceCollection = new ServiceCollection();
 
-        // Registering App class as IAppLanguageServices
-        serviceCollection.AddSingleton<IAppLanguageServices>(this);
+        // Register AppLanguageServices as IAppLanguageServices
+        serviceCollection.AddSingleton<IAppLanguageServices>(sp => new AppLanguageServices(this));
 
-        // Build the service provider
+        // Register the Settings UserControl
+        serviceCollection.AddTransient<computerComponentsTracker.Settings>();
+
+        // Build service provider
         ServiceProvider = serviceCollection.BuildServiceProvider();
 
         base.OnStartup(e);
     }
+
 }
