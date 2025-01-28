@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Globalization;
 using System.Windows.Controls;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace computerComponentsTracker
 {
@@ -10,17 +11,17 @@ namespace computerComponentsTracker
         public static ComponentUsage componentUsage;
         public Settings settings;
 
-        public MainWindow()
+        public MainWindow(IServiceProvider serviceProvider)
         {
             InitializeComponent();
-            InitializePages();
+            InitializePages(serviceProvider);
             InitializeComponentPage(); // Run as default
         }
 
-        private void InitializePages()
+        private void InitializePages(IServiceProvider serviceProvider)
         {
             // Create a shared Settings instance
-            settings = new Settings();
+            settings = serviceProvider.GetRequiredService<Settings>();
 
             // Pass the shared Settings instance to ComponentUsage
             componentUsage = new ComponentUsage();

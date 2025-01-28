@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows;
-using System.Resources;
-using System.Diagnostics;
-using System.Globalization;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using computerComponentsTracker;
 
 public partial class App : Application
 {
+    public static IHost? Host { get; private set; }
+
+
     public interface IAppLanguageServices
     {
         void ChangeLanguage(string language);
@@ -37,23 +38,24 @@ public partial class App : Application
         }
     }
 
-    // Static ServiceProvider
     public static IServiceProvider? ServiceProvider { get; set; }
 
     protected override void OnStartup(StartupEventArgs e)
     {
         var serviceCollection = new ServiceCollection();
 
-        // Register AppLanguageServices as IAppLanguageServices
+        // Register services
         serviceCollection.AddSingleton<IAppLanguageServices>(sp => new AppLanguageServices(this));
-
-        // Register the Settings UserControl
-        serviceCollection.AddTransient<computerComponentsTracker.Settings>();
+        serviceCollection.AddTransient<Settings>();
+        serviceCollection.AddTransient<MainWindow>();
 
         // Build service provider
         ServiceProvider = serviceCollection.BuildServiceProvider();
 
+        // Manually create and show MainWindow
+        var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+        mainWindow.Show();
+
         base.OnStartup(e);
     }
-
 }

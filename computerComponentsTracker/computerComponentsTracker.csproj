@@ -12,6 +12,7 @@
 		<PackageReference Include="LibreHardwareMonitorLib" Version="0.9.4" />
 		<PackageReference Include="LiveCharts" Version="0.9.7" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
 		<PackageReference Include="OpenHardwareMonitor" Version="0.9.6" />
 		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="28.1.39" />
 		<PackageReference Include="Syncfusion.SfProgressBar.WPF" Version="28.1.39" />
