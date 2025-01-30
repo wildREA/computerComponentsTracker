@@ -10,6 +10,7 @@ namespace computerComponentsTracker
     public partial class Settings : UserControl
     {
         public static string refreshRate;
+
         private readonly IAppLanguageServices _languageService;
 
         public Settings(IAppLanguageServices languageService)
