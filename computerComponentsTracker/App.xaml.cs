@@ -3,6 +3,8 @@ using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using computerComponentsTracker;
 
+namespace computerComponentsTracker;
+
 public partial class App : Application
 {
     public interface IAppLanguageServices

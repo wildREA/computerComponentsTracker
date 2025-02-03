@@ -3,7 +3,7 @@ using System.Windows;
 using System.Diagnostics;
 using System.Windows.Controls;
 using Microsoft.Extensions.DependencyInjection;
-using static App;
+using static computerComponentsTracker.App;
 
 namespace computerComponentsTracker
 {
