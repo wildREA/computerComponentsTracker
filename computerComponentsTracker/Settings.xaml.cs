@@ -3,13 +3,13 @@ using System.Windows;
 using System.Diagnostics;
 using System.Windows.Controls;
 using Microsoft.Extensions.DependencyInjection;
-using static App;
+using static computerComponentsTracker.App;
 
 namespace computerComponentsTracker
 {
     public partial class Settings : UserControl
     {
-        public static string refreshRate;
+        public static string? refreshRate;
 
         private readonly IAppLanguageServices _languageService;
 
@@ -21,7 +21,7 @@ namespace computerComponentsTracker
 
         private void refreshRateChanged(object sender, SelectionChangedEventArgs e)
         {
-            refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
         }
 
         private void OnLanguageChanged(object sender, SelectionChangedEventArgs e)

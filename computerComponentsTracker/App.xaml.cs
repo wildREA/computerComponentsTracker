@@ -1,85 +1,90 @@
 ﻿using System;
 using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
-using computerComponentsTracker;
+using System.Collections;
+using System.Globalization;
+using System.Resources;
+using Microsoft.Extensixons.DependencyInjection;
 
-public partial class App : Application
+namespace computerComponentsTracker
 {
-    public interface IAppLanguageServices
+    public partial class App : Application
     {
-        void ChangeLanguage(string language);
-    }
-
-    public class AppLanguageServices : IAppLanguageServices
-    {
-        private readonly Application _application;
-        private string _currentLanguage;
-
-        // Dictionary mapping language codes to resource files
-        private readonly Dictionary<string, string> _languageResources;
-
-        public AppLanguageServices(Application application)
+        public interface IAppLanguageServices
         {
-            _application = application;
-            _currentLanguage = "en-US"; // Default language
-
-            // Dictionary with languages and their resource files
-            _languageResources = new Dictionary<string, string>
-        {
-            { "en-US", "Resources/Strings.xaml" },
-            { "ru-RU", "Resources/Strings.ru.xaml" },
-        };
+            void ChangeLanguage(string language);
         }
 
-        public void ChangeLanguage(string language)
+        public class AppLanguageServices : IAppLanguageServices
         {
-            // Check if language is already set
-            if (language == _currentLanguage) return;
+            private readonly Application _application;
+            private string _currentLanguage;
 
-            // Current language
-            _currentLanguage = language;
+            // Dictionary mapping language codes to resource files
+            private readonly Dictionary<string, string> _languageResources;
 
-            // Clear existing resource dictionaries
-            _application.Resources.MergedDictionaries.Clear();
-
-            // Load the default language resources first
-            var defaultDict = new ResourceDictionary { Source = new Uri("Resources/Strings.xaml", UriKind.Relative) };
-            _application.Resources.MergedDictionaries.Add(defaultDict);
-
-            // Check if the resource file exists for the requested language
-            if (_languageResources.ContainsKey(language))
+            public AppLanguageServices(Application application)
             {
-                var languageResourceUri = _languageResources[language];
-                var languageDict = new ResourceDictionary { Source = new Uri(languageResourceUri, UriKind.Relative) };
-                _application.Resources.MergedDictionaries.Add(languageDict);
+                _application = application;
+                _currentLanguage = "en-US"; // Default language
+
+                // Dictionary with languages and their resource files
+                _languageResources = new Dictionary<string, string>
+            {
+                { "en-US", "Resources/Strings.xaml" },
+                { "ru-RU", "Resources/Strings.ru.xaml" },
+            };
             }
-            else
+
+            public void ChangeLanguage(string language)
             {
-                // Optionally, fall back to the default language if the requested one isn't available
-                Console.WriteLine($"Warning: Language resource for '{language}' was not found. Falling back to default.");
+                // Check if language is already set
+                if (language == _currentLanguage) return;
+
+                // Current language
+                _currentLanguage = language;
+
+                // Clear existing resource dictionaries
+                _application.Resources.MergedDictionaries.Clear();
+
+                // Load the default language resources first
+                var defaultDict = new ResourceDictionary { Source = new Uri("Resources/Strings.xaml", UriKind.Relative) };
+                _application.Resources.MergedDictionaries.Add(defaultDict);
+
+                // Check if the resource file exists for the requested language
+                if (_languageResources.ContainsKey(language))
+                {
+                    var languageResourceUri = _languageResources[language];
+                    var languageDict = new ResourceDictionary { Source = new Uri(languageResourceUri, UriKind.Relative) };
+                    _application.Resources.MergedDictionaries.Add(languageDict);
+                }
+                else
+                {
+                    // Optionally, fall back to the default language if the requested one isn't available
+                    Console.WriteLine($"Warning: Language resource for '{language}' was not found. Falling back to default.");
+                }
             }
         }
-    }
 
-    private static IServiceProvider? ServiceProvider;
+        private static IServiceProvider? ServiceProvider;
 
-    protected override void OnStartup(StartupEventArgs e)
-    {
-        var serviceCollection = new ServiceCollection();
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            var serviceCollection = new ServiceCollection();
 
-        // Register services
-        serviceCollection.AddSingleton<IAppLanguageServices, AppLanguageServices>();
-        serviceCollection.AddTransient<ComponentUsage>();
-        serviceCollection.AddTransient<MainWindow>();
-        serviceCollection.AddTransient<Settings>();
+            // Register services
+            serviceCollection.AddSingleton<IAppLanguageServices, AppLanguageServices>();
+            serviceCollection.AddTransient<ComponentUsage>();
+            serviceCollection.AddTransient<MainWindow>();
+            serviceCollection.AddTransient<Settings>();
 
-        // Build service provider
-        ServiceProvider = serviceCollection.BuildServiceProvider();
+            // Build service provider
+            ServiceProvider = serviceCollection.BuildServiceProvider();
 
-        // Manually create and show MainWindow
-        MainWindow = ServiceProvider.GetRequiredService<MainWindow>();
-        MainWindow?.Show();
+            // Manually create and show MainWindow
+            MainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+            MainWindow?.Show();
 
-        base.OnStartup(e);
+            base.OnStartup(e);
+        }
     }
 }

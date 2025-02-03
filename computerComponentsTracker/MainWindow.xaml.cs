@@ -4,7 +4,6 @@ using System.Threading;
 using System.Globalization;
 using System.Windows.Controls;
 using Microsoft.Extensions.DependencyInjection;
-using static App;
 
 namespace computerComponentsTracker
 {
@@ -12,15 +11,20 @@ namespace computerComponentsTracker
     {
         public static ComponentUsage componentUsage;
         public Settings settings;
-        private readonly IServiceProvider _serviceProvider;
+        private IServiceProvider _serviceProvider;
 
-        //public MainWindow(IServiceProvider serviceProvider)
-        public MainWindow(IServiceProvider serviceProvider)
+        // Empty constructor
+        public MainWindow()
+        {
+            InitializeComponent();
+        }t
+
+        // Explicit initialization
+        public void Initialize(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            InitializeComponent();
             InitializePages(_serviceProvider);
-            InitializeComponentPage(); // Run as default
+            InitializeComponentPage(); // Set default page
         }
 
         private void InitializePages(IServiceProvider serviceProvider)
