@@ -70,7 +70,7 @@ public partial class App : Application
         var serviceCollection = new ServiceCollection();
 
         // Register services
-        serviceCollection.AddSingleton<IAppLanguageServices, AppLanguageServices>();
+        serviceCollection.AddSingleton<IAppLanguageServices, AppLanguageServices>(x => new(this));
         serviceCollection.AddTransient<ComponentUsage>();
         serviceCollection.AddTransient<MainWindow>();
         serviceCollection.AddTransient<Settings>();
