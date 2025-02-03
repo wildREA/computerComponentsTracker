@@ -4,7 +4,6 @@ using System.Threading;
 using System.Globalization;
 using System.Windows.Controls;
 using Microsoft.Extensions.DependencyInjection;
-using static App;
 
 namespace computerComponentsTracker
 {
