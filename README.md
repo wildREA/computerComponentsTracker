@@ -141,12 +141,12 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] Italiano (Italian)
     - [ ] 日本語 (Japanese)
     - [ ] Lietuvių (Lithuanian)
+    - [ ] 普通话 (Mandarin)
     - [ ] Polski (Polish)
     - [ ] Português (Brasileiro) (Portuguese - Brazilian)
     - [ ] Русский (Russian)
     - [ ] ภาษาไทย (Thai)
     - [ ] Türkçe (Turkish)
-    - [ ] 普通话 (Mandarin)
     - [ ] (Lebanese) لبناني
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
