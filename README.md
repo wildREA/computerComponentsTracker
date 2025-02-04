@@ -129,25 +129,26 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
 - [x] Add GPU Usage Tracker
 - [ ] Add Light/Dark mode (likely remember setting)
-- [ ] Multi-language Support
-    - [ ] (Arabic) العربية
-    - [ ] (Persian) فارسی
-    - [ ] Deutsch (German)
-    - [ ] Ελληνικά (Greek)
-    - [/] English (UK; if possible)
-    - [ ] Français (French)
-    - [ ] (Hebrew) עברית
-    - [ ] हिंदी (Hindi)
-    - [ ] Italiano (Italian)
-    - [ ] 日本語 (Japanese)
-    - [ ] Lietuvių (Lithuanian)
-    - [ ] 普通话 (Mandarin)
-    - [ ] Polski (Polish)
-    - [ ] Português (Brasileiro) (Portuguese - Brazilian)
-    - [ ] Русский (Russian)
-    - [ ] ภาษาไทย (Thai)
-    - [ ] Türkçe (Turkish)
-    - [ ] (Lebanese) لبناني
+- [x] Multi-language Support
+    - [x] (Arabic) العربية
+    - [x] (Persian) فارسی
+    - [x] Deutsch (German)
+    - [x] Ελληνικά (Greek)
+    - [x] English (American)
+    - [x] Français (French)
+    - [x] (Hebrew) עברית
+    - [x] हिंदी (Hindi)
+    - [x] Italiano (Italian)
+    - [x] 日本語 (Japanese)
+    - [x] Lietuvių (Lithuanian)
+    - [] Nederlands (Dutch)
+    - [x] 普通话 (Mandarin)
+    - [x] Polski (Polish)
+    - [x] Português (Brasileiro) (Portuguese - Brazilian)
+    - [x] Русский (Russian)
+    - [x] ภาษาไทย (Thai)
+    - [x] Türkçe (Turkish)
+    - [x] (Lebanese) لبناني
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
