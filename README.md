@@ -60,7 +60,7 @@
 ## About The Project
 
 This is a software application made with .NET as a Window Presentation Form (WPF). The purpose of the software is to display hardware statistics. Although, I realized that I had accidentally made a Task Manager version 2.0.
-Since this is my project, it's of course a better version of Microsoft's poor Task Manager.
+Since this is my project, it's of course a better version of Microsoft's Task Manager.
 
 Features:
 * All values are displayed in their correct and common formats when looking at their types. (E.g. network usage; sent and received bytes are mostly looked at in MB/s or KB/s.)
