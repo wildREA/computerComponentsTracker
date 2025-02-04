@@ -146,7 +146,7 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] Русский (Russian)
     - [ ] ภาษาไทย (Thai)
     - [ ] Türkçe (Turkish)
-    - [ ] 中文 (Chinese)
+    - [ ] 普通话 (Mandarin)
     - [ ] (Lebanese) لبناني
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
