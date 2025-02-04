@@ -129,7 +129,7 @@ The native way to use the software is simply visually. Any other features are no
     - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
 - [x] Add GPU Usage Tracker
 - [ ] Add Light/Dark mode (likely remember setting)
-- [x] Multi-language Support
+- [ ] Multi-language Support
     - [x] (Arabic) العربية
     - [x] (Persian) فارسی
     - [x] Deutsch (German)
@@ -141,7 +141,7 @@ The native way to use the software is simply visually. Any other features are no
     - [x] Italiano (Italian)
     - [x] 日本語 (Japanese)
     - [x] Lietuvių (Lithuanian)
-    - [] Nederlands (Dutch)
+    - [ ] Nederlands (Dutch)
     - [x] 普通话 (Mandarin)
     - [x] Polski (Polish)
     - [x] Português (Brasileiro) (Portuguese - Brazilian)
