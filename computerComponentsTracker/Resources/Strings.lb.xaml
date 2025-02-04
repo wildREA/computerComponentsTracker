@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<sys:String x:Key="SettingsTitle">الإعدادات</sys:String>
+	<sys:String x:Key="ChangeSettings">تغيير إعدادات التطبيق</sys:String>
+	<sys:String x:Key="ChangeTheme">الثيم</sys:String>
+	<sys:String x:Key="ChangeLanguage">اللغة</sys:String>
+	<sys:String x:Key="ChangeNetworkAdapter">محول الشبكة</sys:String>
+	<sys:String x:Key="ChangeRefreshRate">معدل التحديث</sys:String>
+	<sys:String x:Key="LightTheme">الإضاءة</sys:String>
+	<sys:String x:Key="DarkTheme">الظلام</sys:String>
+	<sys:String x:Key="ArabicSaudiLanguage">العربية</sys:String>
+	<sys:String x:Key="FarsiIraqLanguage">الفارسية</sys:String>
+	<sys:String x:Key="GermanLanguage">الألمانية</sys:String>
+	<sys:String x:Key="GreekLanguage">اليونانية</sys:String>
+	<sys:String x:Key="EnglishLanguage">الإنجليزية</sys:String>
+	<sys:String x:Key="FrenchLanguage">الفرنسية</sys:String>
+	<sys:String x:Key="HebrewLanguage">العبرية</sys:String>
+	<sys:String x:Key="HindiLanguage">الهندية</sys:String>
+	<sys:String x:Key="KoreanLanguage">الكورية</sys:String>
+	<sys:String x:Key="ItalianLanguage">الإيطالية</sys:String>
+	<sys:String x:Key="KurdishLanguage">الكردية</sys:String>
+	<sys:String x:Key="LithuanianLanguage">الليتوانية</sys:String>
+	<sys:String x:Key="JapaneseLanguage">اليابانية</sys:String>
+	<sys:String x:Key="PolishLanguage">البولندية</sys:String>
+	<sys:String x:Key="PortugueseLanguage">البرتغالية</sys:String>
+	<sys:String x:Key="RussianLanguage">الروسية</sys:String>
+	<sys:String x:Key="ThaiLanguage">التايلندية</sys:String>
+	<sys:String x:Key="TurkishLanguage">التركية</sys:String>
+	<sys:String x:Key="ChineseLanguage">الصينية</sys:String>
+	<sys:String x:Key="LebaneseLanguage">اللبنانية</sys:String>
+	<sys:String x:Key="AutoNetwork">تلقائي</sys:String>
+	<sys:String x:Key="EthernetNetwork">الإيثرنت</sys:String>
+	<sys:String x:Key="WiFiNetwork">واي فاي</sys:String>
+	<sys:String x:Key="SecondRefreshRate">ثواني</sys:String>
+	<sys:String x:Key="MillisecondRefreshRate">ميلي ثانية</sys:String>
+</ResourceDictionary>

@@ -30,6 +30,13 @@ public partial class App : Application
         {
             { "en-US", "Resources/Strings.xaml" },
             { "ru-RU", "Resources/Strings.ru.xaml" },
+            { "lt-LT", "Resources/Strings.lt.xaml" },
+            { "de-DE", "Resources/Strings.de.xaml" },
+            { "ar-SA", "Resources/Strings.ar.xaml" },
+            { "el-GR", "Resources/Strings.el.xaml" },
+            { "tr-TR", "Resources/Strings.tr.xaml" },
+            { "fr-FR", "Resources/Strings.fr.xaml" },
+            { "fa-IR", "Resources/Strings.el.xaml" },
         };
         }
 

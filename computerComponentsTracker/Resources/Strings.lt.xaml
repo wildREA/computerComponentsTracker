@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<sys:String x:Key="SettingsTitle">Nustatymai</sys:String>
+	<sys:String x:Key="ChangeSettings">Pakeisti programos nustatymus</sys:String>
+	<sys:String x:Key="ChangeTheme">Tema</sys:String>
+	<sys:String x:Key="ChangeLanguage">Kalba</sys:String>
+	<sys:String x:Key="ChangeNetworkAdapter">Tinklo adapteris</sys:String>
+	<sys:String x:Key="ChangeRefreshRate">Atnaujinimo dažnis</sys:String>
+	<sys:String x:Key="LightTheme">Šviesi</sys:String>
+	<sys:String x:Key="DarkTheme">Tamsi</sys:String>
+	<sys:String x:Key="ArabicSaudiLanguage">Arabų</sys:String>
+	<sys:String x:Key="FarsiIraqLanguage">Persų</sys:String>
+	<sys:String x:Key="GermanLanguage">Vokiečių</sys:String>
+	<sys:String x:Key="GreekLanguage">Graikų</sys:String>
+	<sys:String x:Key="EnglishLanguage">Anglų</sys:String>
+	<sys:String x:Key="FrenchLanguage">Prancūzų</sys:String>
+	<sys:String x:Key="HebrewLanguage">Hebrajų</sys:String>
+	<sys:String x:Key="HindiLanguage">Hindi</sys:String>
+	<sys:String x:Key="KoreanLanguage">Korėjiečių</sys:String>
+	<sys:String x:Key="ItalianLanguage">Italų</sys:String>
+	<sys:String x:Key="KurdishLanguage">Kurdų</sys:String>
+	<sys:String x:Key="LithuanianLanguage">Lietuvių</sys:String>
+	<sys:String x:Key="JapaneseLanguage">Japonų</sys:String>
+	<sys:String x:Key="PolishLanguage">Lenkų</sys:String>
+	<sys:String x:Key="PortugueseLanguage">Portugalų</sys:String>
+	<sys:String x:Key="RussianLanguage">Rusų</sys:String>
+	<sys:String x:Key="ThaiLanguage">Tajų</sys:String>
+	<sys:String x:Key="TurkishLanguage">Turkų</sys:String>
+	<sys:String x:Key="ChineseLanguage">Kinų</sys:String>
+	<sys:String x:Key="LebaneseLanguage">Libanų</sys:String>
+	<sys:String x:Key="AutoNetwork">Automatinis</sys:String>
+	<sys:String x:Key="EthernetNetwork">Ethernet</sys:String>
+	<sys:String x:Key="WiFiNetwork">Wi-Fi</sys:String>
+	<sys:String x:Key="SecondRefreshRate">Sekundės</sys:String>
+	<sys:String x:Key="MillisecondRefreshRate">Milisekundės</sys:String>
+</ResourceDictionary>

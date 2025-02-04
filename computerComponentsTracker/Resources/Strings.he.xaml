@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="SettingsTitle">הגדרות</sys:String>
+    <sys:String x:Key="ChangeSettings">שנה את הגדרות האפליקציה</sys:String>
+    <sys:String x:Key="ChangeTheme">נושא</sys:String>
+    <sys:String x:Key="ChangeLanguage">שפה</sys:String>
+    <sys:String x:Key="ChangeNetworkAdapter">מתאם רשת</sys:String>
+    <sys:String x:Key="ChangeRefreshRate">קצב רענון</sys:String>
+    <sys:String x:Key="LightTheme">בהיר</sys:String>
+    <sys:String x:Key="DarkTheme">כהה</sys:String>
+    <sys:String x:Key="ArabicSaudiLanguage">ערבי</sys:String>
+    <sys:String x:Key="FarsiIraqLanguage">פרסי</sys:String>
+    <sys:String x:Key="GermanLanguage">גרמנית</sys:String>
+    <sys:String x:Key="GreekLanguage">יוונית</sys:String>
+    <sys:String x:Key="EnglishLanguage">אנגלית</sys:String>
+    <sys:String x:Key="FrenchLanguage">צרפתית</sys:String>
+    <sys:String x:Key="HebrewLanguage">עברית</sys:String>
+    <sys:String x:Key="HindiLanguage">הינדית</sys:String>
+    <sys:String x:Key="KoreanLanguage">קוריאנית</sys:String>
+    <sys:String x:Key="ItalianLanguage">איטלקית</sys:String>
+    <sys:String x:Key="KurdishLanguage">כּוּרְדִי</sys:String>
+    <sys:String x:Key="LithuanianLanguage">ליטאית</sys:String>
+    <sys:String x:Key="JapaneseLanguage">יפנית</sys:String>
+    <sys:String x:Key="PolishLanguage">פולנית</sys:String>
+    <sys:String x:Key="PortugueseLanguage">פורטוגזית</sys:String>
+    <sys:String x:Key="RussianLanguage">רוסית</sys:String>
+    <sys:String x:Key="ThaiLanguage">תאילנדית</sys:String>
+    <sys:String x:Key="TurkishLanguage">טורקית</sys:String>
+    <sys:String x:Key="ChineseLanguage">סינית</sys:String>
+    <sys:String x:Key="LebaneseLanguage">לבנוני</sys:String>
+    <sys:String x:Key="AutoNetwork">אוטומטי</sys:String>
+    <sys:String x:Key="EthernetNetwork">אתרנט</sys:String>
+    <sys:String x:Key="WiFiNetwork">Wi-Fi</sys:String>
+    <sys:String x:Key="SecondRefreshRate">שניות</sys:String>
+    <sys:String x:Key="MillisecondRefreshRate">מילישניות</sys:String>
+</ResourceDictionary>

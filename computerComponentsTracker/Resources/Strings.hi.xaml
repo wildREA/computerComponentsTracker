@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<sys:String x:Key="SettingsTitle">सेटिंग्स</sys:String>
+	<sys:String x:Key="ChangeSettings">ऐप्लिकेशन की सेटिंग्स बदलें</sys:String>
+	<sys:String x:Key="ChangeTheme">थीम</sys:String>
+	<sys:String x:Key="ChangeLanguage">भाषा</sys:String>
+	<sys:String x:Key="ChangeNetworkAdapter">नेटवर्क एडेप्टर</sys:String>
+	<sys:String x:Key="ChangeRefreshRate">रीफ्रेश रेट</sys:String>
+	<sys:String x:Key="LightTheme">प्रकाश</sys:String>
+	<sys:String x:Key="DarkTheme">अंधेरा</sys:String>
+	<sys:String x:Key="ArabicSaudiLanguage">अरबी</sys:String>
+	<sys:String x:Key="FarsiIraqLanguage">फारसी</sys:String>
+	<sys:String x:Key="GermanLanguage">जर्मन</sys:String>
+	<sys:String x:Key="GreekLanguage">ग्रीक</sys:String>
+	<sys:String x:Key="EnglishLanguage">अंग्रेज़ी</sys:String>
+	<sys:String x:Key="FrenchLanguage">फ्रांसीसी</sys:String>
+	<sys:String x:Key="HebrewLanguage">हिब्रू</sys:String>
+	<sys:String x:Key="HindiLanguage">हिंदी</sys:String>
+	<sys:String x:Key="KoreanLanguage">कोरियाई</sys:String>
+	<sys:String x:Key="ItalianLanguage">इतालवी</sys:String>
+	<sys:String x:Key="KurdishLanguage">कुर्दी</sys:String>
+	<sys:String x:Key="LithuanianLanguage">लिथुआनियाई</sys:String>
+	<sys:String x:Key="JapaneseLanguage">जापानी</sys:String>
+	<sys:String x:Key="PolishLanguage">पोलिश</sys:String>
+	<sys:String x:Key="PortugueseLanguage">पुर्तगाली</sys:String>
+	<sys:String x:Key="RussianLanguage">रूसी</sys:String>
+	<sys:String x:Key="ThaiLanguage">थाई</sys:String>
+	<sys:String x:Key="TurkishLanguage">तुर्की</sys:String>
+	<sys:String x:Key="ChineseLanguage">चीनी</sys:String>
+	<sys:String x:Key="LebaneseLanguage">लेबनानी</sys:String>
+	<sys:String x:Key="AutoNetwork">स्वचालित</sys:String>
+	<sys:String x:Key="EthernetNetwork">ईथरनेट</sys:String>
+	<sys:String x:Key="WiFiNetwork">वाइ-फाई</sys:String>
+	<sys:String x:Key="SecondRefreshRate">सेकंड</sys:String>
+	<sys:String x:Key="MillisecondRefreshRate">मिलीसेकंड</sys:String>
+</ResourceDictionary>

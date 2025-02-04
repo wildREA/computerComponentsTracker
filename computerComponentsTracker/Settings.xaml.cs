@@ -21,7 +21,7 @@ namespace computerComponentsTracker
 
         private void refreshRateChanged(object sender, SelectionChangedEventArgs e)
         {
-            refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            refreshRate = (this.RefreshRateComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
         }
 
         private void OnLanguageChanged(object sender, SelectionChangedEventArgs e)
