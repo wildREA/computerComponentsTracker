@@ -21,6 +21,7 @@
     <sys:String x:Key="ItalianLanguage">Italiano</sys:String>
     <sys:String x:Key="KurdishLanguage">كوردی</sys:String>
     <sys:String x:Key="LithuanianLanguage">Lietuvių</sys:String>
+    <sys:String x:Key="DutchLanguage">Nederlands</sys:String>
     <sys:String x:Key="JapaneseLanguage">日本語</sys:String>
     <sys:String x:Key="PolishLanguage">Polski</sys:String>
     <sys:String x:Key="PortugueseLanguage">Português</sys:String>
