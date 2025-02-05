@@ -20,10 +20,27 @@
             </ComboBox>
             <TextBlock Text="{DynamicResource ChangeLanguage}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
             <ComboBox x:Name="LanguageComboBox" SelectionChanged="OnLanguageChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
-                <ComboBoxItem Tag="en-US" Content="{DynamicResource EnglishLanguage}"/>
-                <ComboBoxItem Tag="ru-RU" Content="{DynamicResource RussianLanguage}"/>
-                <ComboBoxItem Tag="lt-LT" Content="{DynamicResource LithuanianLanguage}"/>
+                <ComboBoxItem Tag="ar-SA" Content="{DynamicResource ArabicSaudiLanguage}"/>
+                <ComboBoxItem Tag="ar-IQ" Content="{DynamicResource FarsiIraqLanguage}"/>
                 <ComboBoxItem Tag="de-DE" Content="{DynamicResource GermanLanguage}"/>
+                <ComboBoxItem Tag="el-GR" Content="{DynamicResource GreekLanguage}"/>
+                <ComboBoxItem Tag="en-US" Content="{DynamicResource EnglishLanguage}"/>
+                <ComboBoxItem Tag="fr-FR" Content="{DynamicResource FrenchLanguage}"/>
+                <ComboBoxItem Tag="he-IL" Content="{DynamicResource HebrewLanguage}"/>
+                <ComboBoxItem Tag="hi-IN" Content="{DynamicResource HindiLanguage}"/>
+                <ComboBoxItem Tag="ko-KR" Content="{DynamicResource KoreanLanguage}"/>
+                <ComboBoxItem Tag="it-IT" Content="{DynamicResource ItalianLanguage}"/>
+                <ComboBoxItem Tag="ku-IQ" Content="{DynamicResource KurdishLanguage}"/>
+                <ComboBoxItem Tag="lt-LT" Content="{DynamicResource LithuanianLanguage}"/>
+                <ComboBoxItem Tag="nl-NL" Content="{DynamicResource DutchLanguage}"/>
+                <ComboBoxItem Tag="jp-JP" Content="{DynamicResource JapaneseLanguage}"/>
+                <ComboBoxItem Tag="pl-PL" Content="{DynamicResource PolishLanguage}"/>
+                <ComboBoxItem Tag="pt-BR" Content="{DynamicResource PortugueseLanguage}"/>
+                <ComboBoxItem Tag="ru-RU" Content="{DynamicResource RussianLanguage}"/>
+                <ComboBoxItem Tag="th-TH" Content="{DynamicResource ThaiLanguage}"/>
+                <ComboBoxItem Tag="tr-TR" Content="{DynamicResource TurkishLanguage}"/>
+                <ComboBoxItem Tag="zh-CN" Content="{DynamicResource ChineseLanguage}"/>
+                <ComboBoxItem Tag="ar-LB" Content="{DynamicResource LebaneseLanguage}"/>
             </ComboBox>
                 <TextBlock Text="Network Adapter" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
             <ComboBox x:Name="NetworkComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">

@@ -28,15 +28,27 @@ public partial class App : Application
             // Dictionary with languages and their resource files
             _languageResources = new Dictionary<string, string>
         {
-            { "en-US", "Resources/Strings.xaml" },
-            { "ru-RU", "Resources/Strings.ru.xaml" },
-            { "lt-LT", "Resources/Strings.lt.xaml" },
+            { "ar-SA", "Resources/Strings.sa.xaml" },
+            { "ar-IQ", "Resources/Strings.fa.xaml" },
             { "de-DE", "Resources/Strings.de.xaml" },
-            { "ar-SA", "Resources/Strings.ar.xaml" },
             { "el-GR", "Resources/Strings.el.xaml" },
-            { "tr-TR", "Resources/Strings.tr.xaml" },
+            { "en-US", "Resources/Strings.xaml" },
             { "fr-FR", "Resources/Strings.fr.xaml" },
-            { "fa-IR", "Resources/Strings.el.xaml" },
+            { "he-IL", "Resources/Strings.he.xaml" },
+            { "hi-IN", "Resources/Strings.hi.xaml" },
+            { "ko-KR", "Resources/Strings.ko.xaml" },
+            { "it-IT", "Resources/Strings.it.xaml" },
+            { "ku-IQ", "Resources/Strings.ku.xaml" },
+            { "lt-LT", "Resources/Strings.lt.xaml" },
+            { "nl-NL", "Resources/Strings.nl.xaml" },
+            { "jp-JP", "Resources/Strings.jp.xaml" },
+            { "pl-PL", "Resources/Strings.pl.xaml" },
+            { "pt-BR", "Resources/Strings.pt.xaml" },
+            { "ru-RU", "Resources/Strings.ru.xaml" },
+            { "th-TH", "Resources/Strings.th.xaml" },
+            { "tr-TR", "Resources/Strings.tr.xaml" },
+            { "zh-CN", "Resources/Strings.zh.xaml" },
+            { "ar-LB", "Resources/Strings.lb.xaml" },
         };
         }
 
