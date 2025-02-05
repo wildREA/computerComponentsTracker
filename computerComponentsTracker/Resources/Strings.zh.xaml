@@ -21,7 +21,8 @@
 	<sys:String x:Key="ItalianLanguage">意大利语</sys:String>
 	<sys:String x:Key="KurdishLanguage">库尔德语</sys:String>
 	<sys:String x:Key="LithuanianLanguage">立陶宛语</sys:String>
-	<sys:String x:Key="JapaneseLanguage">日语</sys:String>
+    <sys:String x:Key="DutchLanguage">荷兰语</sys:String>
+    <sys:String x:Key="JapaneseLanguage">日语</sys:String>
 	<sys:String x:Key="PolishLanguage">波兰语</sys:String>
 	<sys:String x:Key="PortugueseLanguage">葡萄牙语</sys:String>
 	<sys:String x:Key="RussianLanguage">俄语</sys:String>

@@ -21,7 +21,8 @@
 	<sys:String x:Key="ItalianLanguage">इतालवी</sys:String>
 	<sys:String x:Key="KurdishLanguage">कुर्दी</sys:String>
 	<sys:String x:Key="LithuanianLanguage">लिथुआनियाई</sys:String>
-	<sys:String x:Key="JapaneseLanguage">जापानी</sys:String>
+    <sys:String x:Key="DutchLanguage">डच</sys:String>
+    <sys:String x:Key="JapaneseLanguage">जापानी</sys:String>
 	<sys:String x:Key="PolishLanguage">पोलिश</sys:String>
 	<sys:String x:Key="PortugueseLanguage">पुर्तगाली</sys:String>
 	<sys:String x:Key="RussianLanguage">रूसी</sys:String>

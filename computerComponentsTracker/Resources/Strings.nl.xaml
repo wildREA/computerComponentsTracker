@@ -9,8 +9,8 @@
     <sys:String x:Key="ChangeRefreshRate">Vernieuwingssnelheid</sys:String>
     <sys:String x:Key="LightTheme">Licht</sys:String>
     <sys:String x:Key="DarkTheme">Donker</sys:String>
-    <sys:String x:Key="ArabicSaudiLanguage">Arabisch (Saoedi-Arabië)</sys:String>
-    <sys:String x:Key="FarsiIraqLanguage">Perzisch (Irak)</sys:String>
+    <sys:String x:Key="ArabicSaudiLanguage">Arabisch</sys:String>
+    <sys:String x:Key="FarsiIraqLanguage">Perzisch</sys:String>
     <sys:String x:Key="GermanLanguage">Duits</sys:String>
     <sys:String x:Key="GreekLanguage">Grieks</sys:String>
     <sys:String x:Key="EnglishLanguage">Engels</sys:String>
@@ -21,6 +21,7 @@
     <sys:String x:Key="ItalianLanguage">Italiaans</sys:String>
     <sys:String x:Key="KurdishLanguage">Koerdisch</sys:String>
     <sys:String x:Key="LithuanianLanguage">Litouws</sys:String>
+    <sys:String x:Key="DutchLanguage">Nederlands</sys:String>
     <sys:String x:Key="JapaneseLanguage">Japans</sys:String>
     <sys:String x:Key="PolishLanguage">Pools</sys:String>
     <sys:String x:Key="PortugueseLanguage">Portugees</sys:String>
