@@ -1,17 +1,20 @@
-﻿using System;
+﻿using System.Diagnostics;
 using System.Windows;
-using System.Diagnostics;
 using System.Windows.Controls;
-using Microsoft.Extensions.DependencyInjection;
 using static computerComponentsTracker.App;
 
 namespace computerComponentsTracker
 {
     public partial class Settings : UserControl
     {
+<<<<<<< HEAD
         public static string? refreshRate;
 
+=======
+        public static string refreshRate;
+>>>>>>> development
         private readonly IAppLanguageServices _languageService;
+        private string? _pendingLanguage; // Store selected language temporarily
 
         public Settings(IAppLanguageServices languageService)
         {
@@ -26,17 +29,18 @@ namespace computerComponentsTracker
 
         private void OnLanguageChanged(object sender, SelectionChangedEventArgs e)
         {
-            string? selectedLanguage = ((ComboBoxItem?)e.AddedItems[0])?.Tag?.ToString();
-            Debug.WriteLine($"Selected Language: {selectedLanguage}");
-
-            if (string.IsNullOrEmpty(selectedLanguage))
-                return;
-
-            _languageService.ChangeLanguage(selectedLanguage);
+            _pendingLanguage = ((ComboBoxItem?)e.AddedItems[0])?.Tag?.ToString();
+            Debug.WriteLine($"Selected Language (Pending): {_pendingLanguage}");
         }
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!string.IsNullOrEmpty(_pendingLanguage))
+            {
+                _languageService.ChangeLanguage(_pendingLanguage);
+                Debug.WriteLine($"Applied Language: {_pendingLanguage}");
+            }
+
             MainWindow.componentUsage = new ComponentUsage();
         }
     }

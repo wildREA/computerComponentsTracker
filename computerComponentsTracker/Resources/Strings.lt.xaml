@@ -1,7 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-	<sys:String x:Key="SettingsTitle">Nustatymai</sys:String>
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">Kompiuterio komponentų sekiklis</sys:String>
+    <sys:String x:Key="SoftwareName">Užduočių tvarkyklė</sys:String>
+    <sys:String x:Key="MonitorTab">Monitorius</sys:String>
+    <sys:String x:Key="SettingsTab">Nustatymai</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">Sistemos sekiklis</sys:String>
+    <sys:String x:Key="CPUUsage">CPU naudojimas:</sys:String>
+    <sys:String x:Key="GPUUsage">GPU naudojimas:</sys:String>
+    <sys:String x:Key="RAMUsage">RAM naudojimas:</sys:String>
+    <sys:String x:Key="DiskUsage">Disko naudojimas:</sys:String>
+    <sys:String x:Key="Battery">Baterija:</sys:String>
+    <sys:String x:Key="NetworkAdapter">Tinklo adapteris:</sys:String>
+    <sys:String x:Key="Notice">Jei tinklo adapteris neteisingas, paleiskite programą iš naujo.</sys:String>
+
+    <!-- Settings.xaml -->
+    <sys:String x:Key="SettingsTitle">Nustatymai</sys:String>
 	<sys:String x:Key="ChangeSettings">Pakeisti programos nustatymus</sys:String>
 	<sys:String x:Key="ChangeTheme">Tema</sys:String>
 	<sys:String x:Key="ChangeLanguage">Kalba</sys:String>

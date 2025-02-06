@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
-using computerComponentsTracker;
 
 namespace computerComponentsTracker;
 

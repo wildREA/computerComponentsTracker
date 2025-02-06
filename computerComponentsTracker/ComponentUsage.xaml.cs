@@ -1,25 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.ComponentModel;
+﻿using System.Management;
+using System.Net.Sockets;
 using System.Diagnostics;
-using System.Globalization;
-using System.Management;
-using System.Net.NetworkInformation;
+using System.Windows.Controls;
 using System.Windows.Threading;
+using System.Net.NetworkInformation;
 using LibreHardwareMonitor.Hardware;
-using Microsoft.Windows.Themes;
 
 namespace computerComponentsTracker
 {
@@ -202,7 +187,9 @@ namespace computerComponentsTracker
 
             foreach (var name in instanceNames)
             {
-                if (!string.IsNullOrEmpty(name) && !name.Contains("vmnet", StringComparison.OrdinalIgnoreCase) && !name.Contains("Virtual", StringComparison.OrdinalIgnoreCase))
+                if (!string.IsNullOrEmpty(name) && 
+                    !name.Contains("vmnet", StringComparison.OrdinalIgnoreCase) && 
+                    !name.Contains("Virtual", StringComparison.OrdinalIgnoreCase))
                 {
                     return name;
                 }
@@ -214,14 +201,35 @@ namespace computerComponentsTracker
         {
             foreach (var ni in NetworkInterface.GetAllNetworkInterfaces())
             {
-                if (ni.NetworkInterfaceType == type && ni.OperationalStatus == OperationalStatus.Up &&
+                if (ni.NetworkInterfaceType == type && 
+                    ni.OperationalStatus == OperationalStatus.Up &&
                     !ni.Description.Contains("vmnet", StringComparison.OrdinalIgnoreCase) &&
                     !ni.Description.Contains("Virtual", StringComparison.OrdinalIgnoreCase))
                 {
+                    if (type == NetworkInterfaceType.Ethernet)
+                    {
+                        IPv4InterfaceStatistics stats = ni.GetIPv4Statistics();
+                        if (stats.BytesReceived == 0 && stats.BytesSent == 0)
+                        {
+                            continue; // Skip if no activity
+                        }
+                    }
                     return ni.Name;
                 }
             }
             throw new InvalidOperationException($"No active {type} network interface found.");
+        }
+
+        private string GetNetworkInterfaceNameBySelection()
+        {
+            // Get network interface name based on selected adapter option
+            return selectedNetworkAdapter switch
+            {
+                "Auto"      => GetNetworkInterfaceName(),
+                "Ethernet"  => GetNetworkInterfaceNameByType(NetworkInterfaceType.Ethernet),
+                "Wi-Fi"     => GetNetworkInterfaceNameByType(NetworkInterfaceType.Wireless80211),
+                _           => GetNetworkInterfaceName()
+            };
         }
 
         private float GetNetworkUsage()
@@ -235,18 +243,6 @@ namespace computerComponentsTracker
             float bytesReceived = bytesReceivedCounter.NextValue();
             float totalBytes = bytesSent + bytesReceived;
             return (totalBytes * 8) / 1000; // Convert bytes to kilobits
-        }
-
-        private string GetNetworkInterfaceNameBySelection()
-        {
-            // Get network interface name based on selected adapter option
-            return selectedNetworkAdapter switch
-            {
-                "Auto" => GetNetworkInterfaceName(),
-                "Ethernet" => GetNetworkInterfaceNameByType(NetworkInterfaceType.Ethernet),
-                "Wi-Fi" => GetNetworkInterfaceNameByType(NetworkInterfaceType.Wireless80211),
-                _ => GetNetworkInterfaceName()
-            };
         }
     }
 }

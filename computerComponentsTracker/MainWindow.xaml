@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:computerComponentsTracker"
         mc:Ignorable="d"
-        Title="Computer Hardware Tracker" Height="475" Width="800"
+        Title="{DynamicResource SoftwareTitle}" Height="475" Width="800"
         MinHeight="475" MinWidth="800"
         WindowStartupLocation="CenterScreen">
     <Grid Grid.Column="0" Background="#f7f7f7">
@@ -21,14 +21,14 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="Task Manager" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBlock Text="{DynamicResource SoftwareName}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
                     <TextBlock Text="2.0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
                 <StackPanel Margin="0,25,0,0">
-                    <Button Content="Monitor" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MonitorButton_Click" Height="35" FontSize="16"/>
-                    <Button Content="Settings" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="35" FontSize="16"/>
+                    <Button Content="{DynamicResource MonitorTab}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MonitorButton_Click" Height="35" FontSize="16"/>
+                    <Button Content="{DynamicResource SettingsTab}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="35" FontSize="16"/>
                 </StackPanel>
             </Grid>
         </Grid>

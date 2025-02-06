@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<!-- MainWindow -->
+	<sys:String x:Key="SoftwareTitle">Rastreador de Componentes de Computador</sys:String>
+	<sys:String x:Key="SoftwareName">Gerenciador de Tarefas</sys:String>
+	<sys:String x:Key="MonitorTab">Monitor</sys:String>
+	<sys:String x:Key="SettingsTab">Configurações</sys:String>
+
+	<!-- Strings.xaml -->
+	<sys:String x:Key="TrackerTitle">Monitor do Sistema</sys:String>
+	<sys:String x:Key="CPUUsage">Uso da CPU:</sys:String>
+	<sys:String x:Key="GPUUsage">Uso da GPU:</sys:String>
+	<sys:String x:Key="RAMUsage">Uso da RAM:</sys:String>
+	<sys:String x:Key="DiskUsage">Uso do Disco:</sys:String>
+	<sys:String x:Key="Battery">Bateria:</sys:String>
+	<sys:String x:Key="NetworkAdapter">Adaptador de Rede:</sys:String>
+	<sys:String x:Key="Notice">Se o adaptador de rede estiver incorreto, reinicie o programa.</sys:String>
+
+	<!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">Configurações</sys:String>
     <sys:String x:Key="ChangeSettings">Alterar as configurações do aplicativo</sys:String>
     <sys:String x:Key="ChangeTheme">Tema</sys:String>

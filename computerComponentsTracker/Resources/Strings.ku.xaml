@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">پارێزگاکانی کۆمپیوتەر</sys:String>
+    <sys:String x:Key="SoftwareName">بەڕێوەبەری کارەکان</sys:String>
+    <sys:String x:Key="MonitorTab">پەیوەندی</sys:String>
+    <sys:String x:Key="SettingsTab">ڕێکخراوەکان</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">پارێزگاکانی سیستم</sys:String>
+    <sys:String x:Key="CPUUsage">بەکارهێنانی CPU:</sys:String>
+    <sys:String x:Key="GPUUsage">بەکارهێنانی GPU:</sys:String>
+    <sys:String x:Key="RAMUsage">بەکارهێنانی RAM:</sys:String>
+    <sys:String x:Key="DiskUsage">بەکارهێنانی ڕاکێشان:</sys:String>
+    <sys:String x:Key="Battery">باتەری:</sys:String>
+    <sys:String x:Key="NetworkAdapter">ئاداپتەری شبکە:</sys:String>
+    <sys:String x:Key="Notice">ئەگەر ئاداپتەری شبکە نەگونجاوە، پێویستە بەرنامە دووبارە دەستپێبکات.</sys:String>
+
+    <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">پارێزگاکانی</sys:String>
     <sys:String x:Key="ChangeSettings">گۆڕینی پارێزگاکانی بەرنامە</sys:String>
     <sys:String x:Key="ChangeTheme">ڕووکاری</sys:String>

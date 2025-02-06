@@ -1,7 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-	<sys:String x:Key="SettingsTitle">सेटिंग्स</sys:String>
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">कंप्यूटर कॉम्पोनेंट्स ट्रैकर</sys:String>
+    <sys:String x:Key="SoftwareName">टास्क मैनेजर</sys:String>
+    <sys:String x:Key="MonitorTab">मॉनिटर</sys:String>
+    <sys:String x:Key="SettingsTab">सेटिंग्स</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">सिस्टम मॉनिटर</sys:String>
+    <sys:String x:Key="CPUUsage">सीपीयू उपयोग:</sys:String>
+    <sys:String x:Key="GPUUsage">जीपीयू उपयोग:</sys:String>
+    <sys:String x:Key="RAMUsage">रैम उपयोग:</sys:String>
+    <sys:String x:Key="DiskUsage">डिस्क उपयोग:</sys:String>
+    <sys:String x:Key="Battery">बैटरी:</sys:String>
+    <sys:String x:Key="NetworkAdapter">नेटवर्क एडेप्टर:</sys:String>
+    <sys:String x:Key="Notice">अगर नेटवर्क एडेप्टर गलत है, तो कृपया प्रोग्राम को फिर से चालू करें.</sys:String>
+
+    <!-- Settings.xaml -->
+    <sys:String x:Key="SettingsTitle">सेटिंग्स</sys:String>
 	<sys:String x:Key="ChangeSettings">ऐप्लिकेशन की सेटिंग्स बदलें</sys:String>
 	<sys:String x:Key="ChangeTheme">थीम</sys:String>
 	<sys:String x:Key="ChangeLanguage">भाषा</sys:String>
