@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">Bilgisayar Donanım Takipçisi</sys:String>
+    <sys:String x:Key="SoftwareName">Görev Yöneticisi</sys:String>
+    <sys:String x:Key="MonitorTab">Monitör</sys:String>
+    <sys:String x:Key="SettingsTab">Ayarlar</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">Sistem Monitörü</sys:String>
+    <sys:String x:Key="CPUUsage">CPU Kullanımı:</sys:String>
+    <sys:String x:Key="GPUUsage">GPU Kullanımı:</sys:String>
+    <sys:String x:Key="RAMUsage">RAM Kullanımı:</sys:String>
+    <sys:String x:Key="DiskUsage">Disk Kullanımı:</sys:String>
+    <sys:String x:Key="Battery">Pil:</sys:String>
+    <sys:String x:Key="NetworkAdapter">Ağ adaptörü:</sys:String>
+    <sys:String x:Key="Notice">Eğer ağ adaptörü doğru değilse, yazılımı yeniden başlatın.</sys:String>
+
+    <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">Ayarlar</sys:String>
     <sys:String x:Key="ChangeSettings">Uygulama ayarlarını değiştir</sys:String>
     <sys:String x:Key="ChangeTheme">Tema</sys:String>

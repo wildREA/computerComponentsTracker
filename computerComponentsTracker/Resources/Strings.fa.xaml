@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">ردیابی اجزای کامپیوتر</sys:String>
+    <sys:String x:Key="SoftwareName">مدیر وظایف</sys:String>
+    <sys:String x:Key="MonitorTab">مانیتور</sys:String>
+    <sys:String x:Key="SettingsTab">تنظیمات</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">مانیتور سیستم</sys:String>
+    <sys:String x:Key="CPUUsage">استفاده از پردازنده:</sys:String>
+    <sys:String x:Key="GPUUsage">استفاده از کارت گرافیک:</sys:String>
+    <sys:String x:Key="RAMUsage">استفاده از حافظه:</sys:String>
+    <sys:String x:Key="DiskUsage">استفاده از دیسک:</sys:String>
+    <sys:String x:Key="Battery">باتری:</sys:String>
+    <sys:String x:Key="NetworkAdapter">آداپتور شبکه:</sys:String>
+    <sys:String x:Key="Notice">اگر آداپتور شبکه اشتباه است، لطفا برنامه را دوباره راه‌اندازی کنید.</sys:String>
+
+    <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">تنظیمات</sys:String>
     <sys:String x:Key="ChangeSettings">تغییر تنظیمات برنامه</sys:String>
     <sys:String x:Key="ChangeTheme">تم</sys:String>

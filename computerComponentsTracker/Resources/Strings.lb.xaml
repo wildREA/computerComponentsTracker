@@ -1,7 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-	<sys:String x:Key="SettingsTitle">الإعدادات</sys:String>
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">متتبع مكونات الكمبيوتر</sys:String>
+    <sys:String x:Key="SoftwareName">مدير المهام</sys:String>
+    <sys:String x:Key="MonitorTab">المراقب</sys:String>
+    <sys:String x:Key="SettingsTab">الإعدادات</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">مراقب النظام</sys:String>
+    <sys:String x:Key="CPUUsage">استخدام وحدة المعالجة المركزية:</sys:String>
+    <sys:String x:Key="GPUUsage">استخدام وحدة المعالجة الرسومية:</sys:String>
+    <sys:String x:Key="RAMUsage">استخدام الذاكرة العشوائية:</sys:String>
+    <sys:String x:Key="DiskUsage">استخدام القرص:</sys:String>
+    <sys:String x:Key="Battery">البطارية:</sys:String>
+    <sys:String x:Key="NetworkAdapter">محول الشبكة:</sys:String>
+    <sys:String x:Key="Notice">إذا كان محول الشبكة غير صحيح، أعد تشغيل البرنامج.</sys:String>
+
+    <!-- Settings.xaml -->
+    <sys:String x:Key="SettingsTitle">الإعدادات</sys:String>
 	<sys:String x:Key="ChangeSettings">تغيير إعدادات التطبيق</sys:String>
 	<sys:String x:Key="ChangeTheme">الثيم</sys:String>
 	<sys:String x:Key="ChangeLanguage">اللغة</sys:String>

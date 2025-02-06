@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">コンピューター構成要素トラッカー</sys:String>
+    <sys:String x:Key="SoftwareName">タスクマネージャー</sys:String>
+    <sys:String x:Key="MonitorTab">モニター</sys:String>
+    <sys:String x:Key="SettingsTab">設定</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">システムモニター</sys:String>
+    <sys:String x:Key="CPUUsage">CPU使用率:</sys:String>
+    <sys:String x:Key="GPUUsage">GPU使用率:</sys:String>
+    <sys:String x:Key="RAMUsage">RAM使用率:</sys:String>
+    <sys:String x:Key="DiskUsage">ディスク使用率:</sys:String>
+    <sys:String x:Key="Battery">バッテリー:</sys:String>
+    <sys:String x:Key="NetworkAdapter">ネットワークアダプタ:</sys:String>
+    <sys:String x:Key="Notice">ネットワークアダプタが不正な場合、プログラムを再起動してください.</sys:String>
+
+    <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">設定</sys:String>
     <sys:String x:Key="ChangeSettings">アプリケーションの設定を変更する</sys:String>
     <sys:String x:Key="ChangeTheme">テーマ</sys:String>

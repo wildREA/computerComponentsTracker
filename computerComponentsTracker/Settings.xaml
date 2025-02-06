@@ -10,13 +10,13 @@
 
     <Grid Background="White" Margin="0,0,0,0">
         <StackPanel>
-            <TextBlock Text="Settings" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,30,0,0"/>
-            <TextBlock Text="Change the settings for the application" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,0,0,0"/>
+            <TextBlock Text="{DynamicResource SettingsTitle}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,30,0,0"/>
+            <TextBlock Text="{DynamicResource ChangeSettings}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,0,0,0"/>
             <Line X1="0" Y1="0" X2="800" Y2="0" Stroke="Black" StrokeThickness="1" Margin="0,10,0,0" Width="500" HorizontalAlignment="Center"/>
-            <TextBlock Text="Theme" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
+            <TextBlock Text="{DynamicResource ChangeTheme}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
             <ComboBox x:Name="ThemeComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
-                <ComboBoxItem Content="Light"/>
-                <ComboBoxItem Content="Dark"/>
+                <ComboBoxItem Content="{DynamicResource LightTheme}"/>
+                <ComboBoxItem Content="{DynamicResource DarkTheme}"/>
             </ComboBox>
             <TextBlock Text="{DynamicResource ChangeLanguage}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
             <ComboBox x:Name="LanguageComboBox" SelectionChanged="OnLanguageChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
@@ -42,16 +42,17 @@
                 <ComboBoxItem Tag="zh-CN" Content="{DynamicResource ChineseLanguage}"/>
                 <ComboBoxItem Tag="ar-LB" Content="{DynamicResource LebaneseLanguage}"/>
             </ComboBox>
-                <TextBlock Text="Network Adapter" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
-            <ComboBox x:Name="NetworkComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
-                <ComboBoxItem Content="Auto"/>
-                <ComboBoxItem Content="Ethernet"/>
-                <ComboBoxItem Content="Wi-Fi"/>
+            <TextBlock Text="{DynamicResource ChangeNetworkAdapter}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
+            <!-- REMOVE THIS OR CHANGE TO SOMETHING ELSE -->
+            <ComboBox x:Name="NetworkInterfaceComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
+                <ComboBoxItem Content="{DynamicResource AutoNetwork}"/>
+                <ComboBoxItem Content="{DynamicResource EthernetNetwork}"/>
+                <ComboBoxItem Content="{DynamicResource WiFiNetwork}"/>
             </ComboBox>
-            <TextBlock Text="Refresh Rate" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
+            <TextBlock Text="{DynamicResource ChangeRefreshRate}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
             <ComboBox x:Name="RefreshRateComboBox" SelectionChanged="refreshRateChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
-                <ComboBoxItem Content="Seconds"/>
-                <ComboBoxItem Content="Milliseconds"/>
+                <ComboBoxItem Content="{DynamicResource SecondRefreshRate}"/>
+                <ComboBoxItem Content="{DynamicResource MillisecondRefreshRate}"/>
             </ComboBox>
             <Button Content="Apply" Click="ApplyButton_Click" Background="#96bbfa" BorderBrush="#708ab8" BorderThickness="1" HorizontalAlignment="Center" Margin="450,30,0,0" Width="70" Height="25" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
