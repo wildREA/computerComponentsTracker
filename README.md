@@ -64,6 +64,7 @@ Since this is my project, it's of course a better version of Microsoft's Task Ma
 
 Features:
 * All values are displayed in their correct and common formats when looking at their types. (E.g. network usage; sent and received bytes are mostly looked at in MB/s or KB/s.)
+* The values are quite sensitive, so you will likely get "jumpier" spikes in values. Fortunately, that will result in more correct data with an update internal of 1-second.
 * The software is sleek and minimalistic. (I plan to create a kind of theme adjustment (classic Windows XP & modern appearance).)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
