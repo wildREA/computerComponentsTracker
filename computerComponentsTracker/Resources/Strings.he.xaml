@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">מעקב רכיבי מחשב</sys:String>
+    <sys:String x:Key="SoftwareName">מנהל המשימות</sys:String>
+    <sys:String x:Key="MonitorTab">מוניטור</sys:String>
+    <sys:String x:Key="SettingsTab">הגדרות</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">מוניטור המערכת</sys:String>
+    <sys:String x:Key="CPUUsage">שימוש במעבד:</sys:String>
+    <sys:String x:Key="GPUUsage">שימוש בכרטיס מסך:</sys:String>
+    <sys:String x:Key="RAMUsage">שימוש בזיכרון:</sys:String>
+    <sys:String x:Key="DiskUsage">שימוש בדיסק:</sys:String>
+    <sys:String x:Key="Battery">סוללה:</sys:String>
+    <sys:String x:Key="NetworkAdapter">מתאם רשת:</sys:String>
+    <sys:String x:Key="Notice">אם המתאם הרשת אינו נכון, אנא הפעל את התוכנה מחדש.</sys:String>
+
+    <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">הגדרות</sys:String>
     <sys:String x:Key="ChangeSettings">שנה את הגדרות האפליקציה</sys:String>
     <sys:String x:Key="ChangeTheme">נושא</sys:String>

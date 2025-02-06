@@ -1,6 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <sys:String x:Key="SoftwareTitle">Παρακολούθηση Υπολογιστικών Στοιχείων</sys:String>
+    <sys:String x:Key="SoftwareName">Διαχειριστής Εργασιών</sys:String>
+    <sys:String x:Key="MonitorTab">Παρακολούθηση</sys:String>
+    <sys:String x:Key="SettingsTab">Ρυθμίσεις</sys:String>
+
+    <!-- Strings.xaml -->
+    <sys:String x:Key="TrackerTitle">Παρακολούθηση Συστήματος</sys:String>
+    <sys:String x:Key="CPUUsage">Χρήση CPU:</sys:String>
+    <sys:String x:Key="GPUUsage">Χρήση GPU:</sys:String>
+    <sys:String x:Key="RAMUsage">Χρήση RAM:</sys:String>
+    <sys:String x:Key="DiskUsage">Χρήση Δίσκου:</sys:String>
+    <sys:String x:Key="Battery">Μπαταρία:</sys:String>
+    <sys:String x:Key="NetworkAdapter">Προσαρμογέας Δικτύου:</sys:String>
+    <sys:String x:Key="Notice">Αν ο προσαρμογέας δικτύου είναι εσφαλμένος, επανεκκινήστε το πρόγραμμα.</sys:String>
+
+    <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">Ρυθμίσεις</sys:String>
     <sys:String x:Key="ChangeSettings">Αλλαγή των ρυθμίσεων της εφαρμογής</sys:String>
     <sys:String x:Key="ChangeTheme">Θέμα</sys:String>

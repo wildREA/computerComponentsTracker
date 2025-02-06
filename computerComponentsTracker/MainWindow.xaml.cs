@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using System.Threading;
-using System.Globalization;
-using System.Windows.Controls;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace computerComponentsTracker
 {

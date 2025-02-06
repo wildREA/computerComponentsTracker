@@ -1,6 +1,23 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<!-- MainWindow -->
+	<sys:String x:Key="SoftwareTitle">Computeronderdelen Tracker</sys:String>
+	<sys:String x:Key="SoftwareName">Taakbeheer</sys:String>
+	<sys:String x:Key="MonitorTab">Monitor</sys:String>
+	<sys:String x:Key="SettingsTab">Instellingen</sys:String>
+
+	<!-- Strings.xaml -->
+	<sys:String x:Key="TrackerTitle">Systeemmonitor</sys:String>
+	<sys:String x:Key="CPUUsage">CPU-gebruik:</sys:String>
+	<sys:String x:Key="GPUUsage">GPU-gebruik:</sys:String>
+	<sys:String x:Key="RAMUsage">RAM-gebruik:</sys:String>
+	<sys:String x:Key="DiskUsage">Schijfgebruik:</sys:String>
+	<sys:String x:Key="Battery">Batterij:</sys:String>
+	<sys:String x:Key="NetworkAdapter">Netwerkadapter:</sys:String>
+	<sys:String x:Key="Notice">Als de netwerkadapter niet juist is, herstart de software.</sys:String>
+
+	<!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">Instellingen</sys:String>
     <sys:String x:Key="ChangeSettings">Wijzig de instellingen voor de applicatie</sys:String>
     <sys:String x:Key="ChangeTheme">Thema</sys:String>
