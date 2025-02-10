@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Standard -->
+    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+    <SolidColorBrush x:Key="HoverColor" Color="#363636"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#404040"/>
+
+    <!-- MainWindow -->
+    <SolidColorBrush x:Key="WindowBackground" Color="Black"/>
+    <SolidColorBrush x:Key="PanelBackground" Color="#121212"/>
+    <SolidColorBrush x:Key="TextColor" Color="#f7f7f7"/>
+
+    <!-- Strings.xaml -->
+
+    <!-- Settings.xaml -->
+</ResourceDictionary>

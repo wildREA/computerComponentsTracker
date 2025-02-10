@@ -2,20 +2,20 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <!-- MainWindow -->
-    <sys:String x:Key="SoftwareTitle">Computer Components Tracker</sys:String>
-    <sys:String x:Key="SoftwareName">Task Manager</sys:String>
+    <sys:String x:Key="SoftwareTitle">Computerkomponenten-Tracker</sys:String>
+    <sys:String x:Key="SoftwareName">Task-Manager</sys:String>
     <sys:String x:Key="MonitorTab">Monitor</sys:String>
-    <sys:String x:Key="SettingsTab">Settings</sys:String>
+    <sys:String x:Key="SettingsTab">Einstellungen</sys:String>
 
     <!-- Strings.xaml -->
-    <sys:String x:Key="TrackerTitle">System Monitor</sys:String>
-    <sys:String x:Key="CPUUsage">CPU Usage:</sys:String>
-    <sys:String x:Key="GPUUsage">GPU Usage:</sys:String>
-    <sys:String x:Key="RAMUsage">RAM Usage:</sys:String>
-    <sys:String x:Key="DiskUsage">Disk Usage:</sys:String>
-    <sys:String x:Key="Battery">Battery:</sys:String>
-    <sys:String x:Key="NetworkAdapter">Network Adapter:</sys:String>
-    <sys:String x:Key="Notice">If the network adapter is incorrect, the program needs to be restarted.</sys:String>
+    <sys:String x:Key="TrackerTitle">Systemmonitor</sys:String>
+    <sys:String x:Key="CPUUsage">CPU-Auslastung:</sys:String>
+    <sys:String x:Key="GPUUsage">GPU-Auslastung:</sys:String>
+    <sys:String x:Key="RAMUsage">RAM-Auslastung:</sys:String>
+    <sys:String x:Key="DiskUsage">Festplattenauslastung:</sys:String>
+    <sys:String x:Key="Battery">Batterie:</sys:String>
+    <sys:String x:Key="NetworkAdapter">Netzwerkadapter:</sys:String>
+    <sys:String x:Key="Notice">Falls der Netzwerkadapter falsch ist, muss das Programm neu gestartet werden.</sys:String>
 
     <!-- Settings.xaml -->
     <sys:String x:Key="SettingsTitle">Einstellungen</sys:String>
