@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              MinHeight="450">
-    <Grid Background="White" Margin="0,0,0,0">
+    <Grid Background="{DynamicResource ResourceKey=WindowBackground}" Margin="0,0,0,0">
         <!-- Title -->
         <TextBlock Text="{DynamicResource TrackerTitle}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,10,0,0"/>
 

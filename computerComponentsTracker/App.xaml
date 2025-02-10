@@ -6,8 +6,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <!-- Default language -->
                 <ResourceDictionary Source="Resources/Strings.xaml"/>
-                <!-- Russian language -->
-                <ResourceDictionary Source="Resources/Strings.ru.xaml"/>
+                <!-- Default theme -->
+                <ResourceDictionary Source="Resources/Themes/DarkTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

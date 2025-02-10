@@ -8,7 +8,34 @@
         Title="{DynamicResource SoftwareTitle}" Height="475" Width="800"
         MinHeight="475" MinWidth="800"
         WindowStartupLocation="CenterScreen">
-    <Grid Grid.Column="0" Background="#f7f7f7">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Foreground" Value="{DynamicResource ResourceKey=TextColor}" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=HoverColor}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Grid.Column="0" Background="{DynamicResource ResourceKey=PanelBackground}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="0.3*"/>
@@ -21,14 +48,14 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="{DynamicResource SoftwareName}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
-                    <TextBlock Text="2.0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBlock Text="{DynamicResource SoftwareName}" Foreground="{DynamicResource ResourceKey=TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBlock Text="2.0" Foreground="{DynamicResource ResourceKey=TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
                 <StackPanel Margin="0,25,0,0">
-                    <Button Content="{DynamicResource MonitorTab}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MonitorButton_Click" Height="35" FontSize="16"/>
-                    <Button Content="{DynamicResource SettingsTab}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="35" FontSize="16"/>
+                    <Button Content="{DynamicResource MonitorTab}" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MonitorButton_Click" Height="35" FontSize="16"/>
+                    <Button Content="{DynamicResource SettingsTab}" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SettingsButton_Click" Height="35" FontSize="16"/>
                 </StackPanel>
             </Grid>
         </Grid>
