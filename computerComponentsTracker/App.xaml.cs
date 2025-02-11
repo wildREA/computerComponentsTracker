@@ -14,18 +14,15 @@ namespace computerComponentsTracker
         {
             private readonly Application _application;
             private string _currentLanguage;
-
-            // Dictionary mapping language codes to resource files
             private readonly Dictionary<string, string> _languageResources;
+            private List<ResourceDictionary> _currentLanguageDictionaries = new List<ResourceDictionary>();
 
             public AppLanguageServices(Application application)
             {
                 _application = application;
-                _currentLanguage = "en-US"; // Default language
-
-                // Dictionary with languages and their resource files
+                _currentLanguage = "en-US";
                 _languageResources = new Dictionary<string, string>
-            {
+                {
                 { "ar-SA", "Resources/Strings.sa.xaml" },
                 { "ar-IQ", "Resources/Strings.fa.xaml" },
                 { "de-DE", "Resources/Strings.de.xaml" },
@@ -52,30 +49,31 @@ namespace computerComponentsTracker
 
             public void ChangeLanguage(string language)
             {
-                // Check if language is already set
                 if (language == _currentLanguage) return;
-
-                // Current language
                 _currentLanguage = language;
 
-                // Clear existing resource dictionaries
-                _application.Resources.MergedDictionaries.Clear();
+                // Remove existing language dictionaries
+                foreach (var dict in _currentLanguageDictionaries)
+                {
+                    _application.Resources.MergedDictionaries.Remove(dict);
+                }
+                _currentLanguageDictionaries.Clear();
 
-                // Load the default language resources first
+                // Add default language
                 var defaultDict = new ResourceDictionary { Source = new Uri("Resources/Strings.xaml", UriKind.Relative) };
                 _application.Resources.MergedDictionaries.Add(defaultDict);
+                _currentLanguageDictionaries.Add(defaultDict);
 
-                // Check if the resource file exists for the requested language
-                if (_languageResources.ContainsKey(language))
+                // Add selected language if available
+                if (_languageResources.TryGetValue(language, out var resourcePath))
                 {
-                    var languageResourceUri = _languageResources[language];
-                    var languageDict = new ResourceDictionary { Source = new Uri(languageResourceUri, UriKind.Relative) };
+                    var languageDict = new ResourceDictionary { Source = new Uri(resourcePath, UriKind.Relative) };
                     _application.Resources.MergedDictionaries.Add(languageDict);
+                    _currentLanguageDictionaries.Add(languageDict);
                 }
                 else
                 {
-                    // Optionally, fall back to the default language if the requested one isn't available
-                    Console.WriteLine($"Warning: Language resource for '{language}' was not found. Falling back to default.");
+                    Console.WriteLine($"Warning: Language resource for '{language}' not found.");
                 }
             }
         }

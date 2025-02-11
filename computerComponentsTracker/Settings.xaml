@@ -7,6 +7,24 @@
              mc:Ignorable="d"
              d:DesignWidth="800"
              d:DesignHeight="450">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="{DynamicResource ResourceKey=PanelBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource ResourceKey=TextColor}"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="Background" Value="{DynamicResource ResourceKey=PanelBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource ResourceKey=TextColor}"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=HoverColor}" />
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=PanelBackground}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid Background="{DynamicResource ResourceKey=WindowBackground}" Margin="0,0,0,0">
         <StackPanel>
             <TextBlock Text="{DynamicResource SettingsTitle}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,30,0,0"/>
@@ -53,7 +71,7 @@
                 <ComboBoxItem Content="{DynamicResource SecondRefreshRate}"/>
                 <ComboBoxItem Content="{DynamicResource MillisecondRefreshRate}"/>
             </ComboBox>
-            <Button Content="Apply" Click="ApplyButton_Click" Background="{DynamicResource ResourceKey=PanelBackground}" Foreground="{DynamicResource ResourceKey=TextColor}" BorderBrush="#708ab8" BorderThickness="1" HorizontalAlignment="Center" Margin="450,30,0,0" Width="70" Height="25" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Content="Apply" Click="ApplyButton_Click" Background="{DynamicResource ResourceKey=PanelBackground}" Foreground="{DynamicResource ResourceKey=TextColor}" BorderBrush="{DynamicResource ResourceKey=BorderBrush}" BorderThickness="1" HorizontalAlignment="Center" Margin="450,30,0,0" Width="70" Height="25" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
     </Grid>
 </UserControl>
