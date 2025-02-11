@@ -8,7 +8,7 @@ namespace computerComponentsTracker
 {
     public partial class Settings : UserControl
     {
-        public static string refreshRate;
+        public static string? refreshRate;
         private readonly IAppLanguageServices _languageService;
         private string? _pendingLanguage; // Store selected language temporarily
 
@@ -29,7 +29,7 @@ namespace computerComponentsTracker
             }
         }
 
-        private void ApplyTheme(string theme)
+        private void ApplyTheme(string? theme)
         {
             // Construct the URI
             Uri themeUri = new Uri($"Resources/Themes/{theme}.xaml", UriKind.Relative);
@@ -75,8 +75,6 @@ namespace computerComponentsTracker
                 _languageService.ChangeLanguage(_pendingLanguage);
                 Debug.WriteLine($"Applied Language: {_pendingLanguage}");
             }
-
-            Application.Current.MainWindow?.UpdateLayout();
 
             MainWindow.componentUsage = new ComponentUsage();
         }
