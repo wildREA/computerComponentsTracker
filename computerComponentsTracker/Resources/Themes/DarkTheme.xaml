@@ -7,8 +7,8 @@
     <SolidColorBrush x:Key="BorderBrush" Color="#404040"/>
 
     <!-- MainWindow -->
-    <SolidColorBrush x:Key="WindowBackground" Color="Black"/>
-    <SolidColorBrush x:Key="PanelBackground" Color="#121212"/>
+    <SolidColorBrush x:Key="WindowBackground" Color="#191919"/>
+    <SolidColorBrush x:Key="PanelBackground" Color="#1c1c1c"/>
     <SolidColorBrush x:Key="TextColor" Color="#f7f7f7"/>
 
     <!-- Strings.xaml -->
