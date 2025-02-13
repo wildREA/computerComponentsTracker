@@ -14,7 +14,7 @@
     <sys:String x:Key="RAMUsage">RAM Usage:</sys:String>
     <sys:String x:Key="DiskUsage">Disk Usage:</sys:String>
     <sys:String x:Key="Battery">Battery:</sys:String>
-    <sys:String x:Key="NetworkAdapter">Battery:</sys:String>
+    <sys:String x:Key="NetworkAdapter">Network Adapter:</sys:String>
     <sys:String x:Key="Notice">If the network adapter is not correct, restart the software.</sys:String>
 
     <!-- Settings.xaml -->

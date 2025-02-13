@@ -11,6 +11,7 @@ namespace computerComponentsTracker
         public static string? refreshRate;
         private readonly IAppLanguageServices _languageService;
         private string? _pendingLanguage; // Store selected language temporarily
+        private string? _pendingTheme;    // Store selected theme temporarily
 
         public Settings(IAppLanguageServices languageService)
         {
@@ -20,17 +21,17 @@ namespace computerComponentsTracker
 
         private void themeChanged(object sender, SelectionChangedEventArgs e)
         {
-            Debug.WriteLine("Theme Changed");   
             if (ThemeComboBox.SelectedItem is ComboBoxItem selectedItem)
             {
-                string? theme = selectedItem.Tag.ToString();
-                ApplyTheme(theme);
-                Debug.WriteLine($"Applied Theme: {theme}");
+                _pendingTheme = selectedItem.Tag.ToString(); // Store theme but don't apply yet
+                Debug.WriteLine($"Selected Theme (Pending): {_pendingTheme}");
             }
         }
 
         private void ApplyTheme(string? theme)
         {
+            if (string.IsNullOrEmpty(theme)) return;
+
             // Construct the URI
             Uri themeUri = new Uri($"Resources/Themes/{theme}.xaml", UriKind.Relative);
 
@@ -40,7 +41,7 @@ namespace computerComponentsTracker
             // Save the user's theme setting
             Properties.Settings.Default.userTheme = theme;
             Properties.Settings.Default.Save();
-            Debug.WriteLine("Saved Settings");
+            Debug.WriteLine($"Saved Theme Setting: {theme}");
 
             var existingThemeDictionary = Application.Current.Resources.MergedDictionaries.FirstOrDefault(d => d.Source != null && d.Source.OriginalString.Contains("Theme"));
             if (existingThemeDictionary != null)
@@ -50,12 +51,11 @@ namespace computerComponentsTracker
                 Application.Current.Resources.MergedDictionaries.Insert(i, newDict);
             }
 
-            Debug.WriteLine("Switched out dict");
+            Debug.WriteLine("Applied Theme and Updated Dictionary");
 
             // Force a layout update
             Application.Current.MainWindow?.UpdateLayout();
         }
-
 
         private void onLanguageChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -74,6 +74,12 @@ namespace computerComponentsTracker
             {
                 _languageService.ChangeLanguage(_pendingLanguage);
                 Debug.WriteLine($"Applied Language: {_pendingLanguage}");
+            }
+
+            if (!string.IsNullOrEmpty(_pendingTheme))
+            {
+                ApplyTheme(_pendingTheme);
+                Debug.WriteLine($"Applied Theme: {_pendingTheme}");
             }
 
             MainWindow.componentUsage = new ComponentUsage();

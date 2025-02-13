@@ -191,14 +191,28 @@
                 <ComboBoxItem Content="{DynamicResource SecondRefreshRate}"/>
                 <ComboBoxItem Content="{DynamicResource MillisecondRefreshRate}"/>
             </ComboBox>
-            <Button Content="Apply" Click="ApplyButton_Click" 
-                    Background="{DynamicResource PanelBackground}" 
-                    Foreground="{DynamicResource TextColor}" 
-                    BorderBrush="{DynamicResource BorderBrush}" 
-                    BorderThickness="1" HorizontalAlignment="Center" 
-                    Margin="450,30,0,0" Width="70" Height="25" 
-                    FontSize="14" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Center"/>
+            <Button Content="Apply" Click="ApplyButton_Click"
+                Background="{DynamicResource PanelBackground}"
+                Foreground="{DynamicResource TextColor}"
+                BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="1" HorizontalAlignment="Center"
+                Margin="450,20,0,0" Width="70" Height="25"
+                FontSize="14" HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="{DynamicResource PanelBackground}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
         </StackPanel>
     </Grid>
 </UserControl>

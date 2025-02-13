@@ -11,7 +11,9 @@
     <SolidColorBrush x:Key="PanelBackground" Color="#f7f7f7"/>
     <SolidColorBrush x:Key="TextColor" Color="Black"/>
 
-    <!-- Strings.xaml -->
-
+    <!-- Monitor -->
+    <SolidColorBrush x:Key="ProgressBarBackground" Color="#e6e6e6"/>
+    <SolidColorBrush x:Key="ProgressBarForeground" Color="LimeGreen"/>
+    
     <!-- Settings.xaml -->
 </ResourceDictionary>
