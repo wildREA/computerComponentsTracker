@@ -6,10 +6,13 @@
     <SolidColorBrush x:Key="HoverColor" Color="#363636"/>
     <SolidColorBrush x:Key="BorderBrush" Color="#404040"/>
 
+    <Color x:Key="HoverColorValue">#363636</Color>
+    <Color x:Key="PanelBackgroundValue">#1c1c1c</Color>
+
     <!-- MainWindow -->
     <SolidColorBrush x:Key="WindowBackground" Color="#191919"/>
     <SolidColorBrush x:Key="PanelBackground" Color="#1c1c1c"/>
-    <SolidColorBrush x:Key="TextColor" Color="#f7f7f7"/>
+    <SolidColorBrush x:Key="TextColor" Color="#dedede"/>
 
     <!-- Strings.xaml -->
 
