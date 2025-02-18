@@ -7,6 +7,7 @@
              mc:Ignorable="d"
              d:DesignWidth="800"
              d:DesignHeight="450">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
     <Grid Background="White" Margin="0,0,0,0">
@@ -35,6 +36,33 @@
             <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
             <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
+=======
+    <UserControl.Resources>
+        <!-- ComboBoxItem Style -->
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Background" Value="{DynamicResource PanelBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+            <Setter Property="Padding" Value="4,2" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource HoverColor}" />
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource PanelBackground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Custom ComboBox Style with ControlTemplate -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Background" Value="{DynamicResource PanelBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden" />
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden" />
+>>>>>>> development
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ComboBox">
@@ -55,7 +83,11 @@
                   HorizontalAlignment="Center"
                   Content="{TemplateBinding SelectionBoxItem}"
                   ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+<<<<<<< HEAD
                   ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"/>
+=======
+                  ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" />
+>>>>>>> development
                                 </Grid>
                             </Border>
                             <!-- ToggleButton to open the dropdown -->
@@ -76,9 +108,15 @@
                 Width="8"
                 Height="4"
                 Margin="0,0,4,0"
+<<<<<<< HEAD
                 VerticalAlignment="Center"/>
                             </ToggleButton>
                             <!-- Dropdown Popup -->
+=======
+                VerticalAlignment="Center" />
+                            </ToggleButton>
+                            <!-- The dropdown Popup -->
+>>>>>>> development
                             <Popup
               x:Name="Popup"
               Placement="Bottom"
@@ -96,18 +134,33 @@
                   x:Name="DropDownBorder"
                   Background="{DynamicResource PanelBackground}"
                   BorderBrush="{DynamicResource BorderBrush}"
+<<<<<<< HEAD
                   BorderThickness="1"/>
                                     <ScrollViewer Margin="4,6,4,6"
                               SnapsToDevicePixels="True">
                                         <StackPanel IsItemsHost="True"
                               KeyboardNavigation.DirectionalNavigation="Contained"/>
+=======
+                  BorderThickness="1" />
+                                    <ScrollViewer Margin="4,6,4,6"
+                              SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True"
+                              KeyboardNavigation.DirectionalNavigation="Contained" />
+>>>>>>> development
                                     </ScrollViewer>
                                 </Grid>
                             </Popup>
                         </Grid>
+<<<<<<< HEAD
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="Border" Property="Background" Value="{DynamicResource DisabledBackground}"/>
+=======
+                        <!-- Optional triggers for states -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="{DynamicResource DisabledBackground}" />
+>>>>>>> development
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -115,25 +168,52 @@
             </Setter>
         </Style>
 
+<<<<<<< HEAD
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+=======
+        <!-- TextBlock and Button styles remain unchanged -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource ButtonTextColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+>>>>>>> development
         </Style>
     </UserControl.Resources>
 
 
     <Grid Background="{DynamicResource ResourceKey=WindowBackground}" Margin="0">
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> development
         <StackPanel>
-            <TextBlock Text="{DynamicResource SettingsTitle}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,30,0,0"/>
-            <TextBlock Text="{DynamicResource ChangeSettings}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,0,0,0"/>
-            <Line X1="0" Y1="0" X2="800" Y2="0" Stroke="Black" StrokeThickness="1" Margin="0,10,0,0" Width="500" HorizontalAlignment="Center"/>
-            <TextBlock Text="{DynamicResource ChangeTheme}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
-            <ComboBox x:Name="ThemeComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
-                <ComboBoxItem Content="{DynamicResource LightTheme}"/>
-                <ComboBoxItem Content="{DynamicResource DarkTheme}"/>
+            <TextBlock Text="{DynamicResource SettingsTitle}" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontSize="16" FontWeight="Bold" Margin="0,30,0,0"/>
+            <TextBlock Text="{DynamicResource ChangeSettings}" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontSize="14" Margin="0,0,0,0"/>
+            <Line X1="0" Y1="0" X2="800" Y2="0" Stroke="Black" StrokeThickness="1" 
+                  Margin="0,10,0,0" Width="500" HorizontalAlignment="Center"/>
+            <TextBlock Text="{DynamicResource ChangeTheme}" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontSize="14" Margin="0,20,0,0"/>
+            <ComboBox x:Name="ThemeComboBox" SelectionChanged="themeChanged" 
+                      HorizontalAlignment="Center" VerticalAlignment="Top" 
+                      Margin="0,10,0,0" Width="200">
+                <ComboBoxItem Tag="LightTheme" Content="{DynamicResource LightTheme}"/>
+                <ComboBoxItem Tag="DarkTheme" Content="{DynamicResource DarkTheme}"/>
             </ComboBox>
-            <TextBlock Text="{DynamicResource ChangeLanguage}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
-            <ComboBox x:Name="LanguageComboBox" SelectionChanged="OnLanguageChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
+            <TextBlock Text="{DynamicResource ChangeLanguage}" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontSize="14" Margin="0,20,0,0"/>
+            <ComboBox x:Name="LanguageComboBox" SelectionChanged="onLanguageChanged" 
+                      HorizontalAlignment="Center" VerticalAlignment="Top" 
+                      Margin="0,10,0,0" Width="200">
                 <ComboBoxItem Tag="ar-SA" Content="{DynamicResource ArabicSaudiLanguage}"/>
                 <ComboBoxItem Tag="ar-IQ" Content="{DynamicResource FarsiIraqLanguage}"/>
                 <ComboBoxItem Tag="de-DE" Content="{DynamicResource GermanLanguage}"/>
@@ -156,18 +236,26 @@
                 <ComboBoxItem Tag="zh-CN" Content="{DynamicResource ChineseLanguage}"/>
                 <ComboBoxItem Tag="ar-LB" Content="{DynamicResource LebaneseLanguage}"/>
             </ComboBox>
-            <TextBlock Text="{DynamicResource ChangeNetworkAdapter}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
-            <!-- REMOVE THIS OR CHANGE TO SOMETHING ELSE -->
-            <ComboBox x:Name="NetworkInterfaceComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
+            <TextBlock Text="{DynamicResource ChangeNetworkAdapter}" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontSize="14" Margin="0,20,0,0"/>
+            <ComboBox x:Name="NetworkInterfaceComboBox" 
+                      HorizontalAlignment="Center" VerticalAlignment="Top" 
+                      Margin="0,10,0,0" Width="200">
                 <ComboBoxItem Content="{DynamicResource AutoNetwork}"/>
                 <ComboBoxItem Content="{DynamicResource EthernetNetwork}"/>
                 <ComboBoxItem Content="{DynamicResource WiFiNetwork}"/>
             </ComboBox>
-            <TextBlock Text="{DynamicResource ChangeRefreshRate}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,20,0,0"/>
-            <ComboBox x:Name="RefreshRateComboBox" SelectionChanged="refreshRateChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200">
+            <TextBlock Text="{DynamicResource ChangeRefreshRate}" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       FontSize="14" Margin="0,20,0,0"/>
+            <ComboBox x:Name="RefreshRateComboBox" SelectionChanged="refreshRateChanged" 
+                      HorizontalAlignment="Center" VerticalAlignment="Top" 
+                      Margin="0,10,0,0" Width="200">
                 <ComboBoxItem Content="{DynamicResource SecondRefreshRate}"/>
                 <ComboBoxItem Content="{DynamicResource MillisecondRefreshRate}"/>
             </ComboBox>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             <Button Content="Apply" Click="ApplyButton_Click" Background="#96bbfa" BorderBrush="#708ab8" BorderThickness="1" HorizontalAlignment="Center" Margin="450,30,0,0" Width="70" Height="25" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 =======
@@ -176,11 +264,22 @@
                     Width="70" Height="25" FontSize="14"
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center">
+=======
+            <Button Content="Apply" Click="ApplyButton_Click"
+                Background="{DynamicResource PanelBackground}"
+                Foreground="{DynamicResource TextColor}"
+                BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="1" HorizontalAlignment="Center"
+                Margin="450,20,0,0" Width="70" Height="25"
+                FontSize="14" HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+>>>>>>> development
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="{DynamicResource PanelBackground}"/>
                         <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
                         <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+<<<<<<< HEAD
                         <Setter Property="OverridesDefaultStyle" Value="True"/>
                         <Setter Property="Template">
                             <Setter.Value>
@@ -205,6 +304,17 @@
                 </Button.Style>
             </Button>
 >>>>>>> Stashed changes
+=======
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+>>>>>>> development
         </StackPanel>
     </Grid>
 </UserControl>

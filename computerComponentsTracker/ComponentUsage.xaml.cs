@@ -10,12 +10,12 @@ namespace computerComponentsTracker
 {
     public partial class ComponentUsage : UserControl
     {
-        private DispatcherTimer timer;
-        private PerformanceCounter cpuCounter;
-        private PerformanceCounter ramCounter;
-        private PerformanceCounter bytesSentCounter;
-        private PerformanceCounter bytesReceivedCounter;
-        private Computer computer;
+        private DispatcherTimer? timer;
+        private PerformanceCounter? cpuCounter;
+        private PerformanceCounter? ramCounter;
+        private PerformanceCounter? bytesSentCounter;
+        private PerformanceCounter? bytesReceivedCounter;
+        private Computer? computer;
         private string selectedNetworkAdapter = "Auto"; // Default to Auto
 
         public ComponentUsage()

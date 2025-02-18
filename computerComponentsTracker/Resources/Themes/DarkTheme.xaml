@@ -3,9 +3,14 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <!-- Standard -->
     <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+<<<<<<< HEAD
     <SolidColorBrush x:Key="BorderBrush" Color="#404040"/>
     <SolidColorBrush x:Key="BorderBrushButton" Color="#26a0da"/>
     <SolidColorBrush x:Key="HoverColor" Color="#1e3b49"/>
+=======
+    <SolidColorBrush x:Key="HoverColor" Color="#363636"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#404040"/>
+>>>>>>> development
 
     <Color x:Key="HoverColorValue">#363636</Color>
     <Color x:Key="PanelBackgroundValue">#1c1c1c</Color>
