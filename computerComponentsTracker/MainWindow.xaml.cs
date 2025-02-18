@@ -1,5 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Input;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace computerComponentsTracker
 {
@@ -45,6 +46,11 @@ namespace computerComponentsTracker
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             MainContent.Content = settings;
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

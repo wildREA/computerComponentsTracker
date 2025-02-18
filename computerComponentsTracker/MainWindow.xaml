@@ -5,15 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:computerComponentsTracker"
         mc:Ignorable="d"
-        Title="{DynamicResource SoftwareTitle}" Height="475" Width="800"
+        Title="{DynamicResource SoftwareTitle}" Height="475" Width="800" Foreground="{DynamicResource TextColor}" Background="{DynamicResource PanelBackground}"
         MinHeight="475" MinWidth="800"
+<<<<<<< Updated upstream
         WindowStartupLocation="CenterScreen">
     <Grid Grid.Column="0" Background="#f7f7f7">
+=======
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        WindowStyle="SingleBorderWindow">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Foreground" Value="{DynamicResource ResourceKey=TextColor}" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=HoverColor}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{DynamicResource ResourceKey=PanelBackground}">
+>>>>>>> Stashed changes
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="0.3*"/>
         </Grid.ColumnDefinitions>
-        <ContentControl x:Name="MainContent" Grid.Column="0"/>
+        <ContentControl x:Name="MainContent" Grid.Column="0" Grid.Row="1" />
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.3*"/>

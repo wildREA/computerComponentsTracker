@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Standard -->
+    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#404040"/>
+    <SolidColorBrush x:Key="BorderBrushButton" Color="#26a0da"/>
+    <SolidColorBrush x:Key="HoverColor" Color="#1e3b49"/>
+
+    <Color x:Key="HoverColorValue">#363636</Color>
+    <Color x:Key="PanelBackgroundValue">#1c1c1c</Color>
+
+    <!-- MainWindow -->
+    <SolidColorBrush x:Key="WindowBackground" Color="#191919"/>
+    <SolidColorBrush x:Key="PanelBackground" Color="#1c1c1c"/>
+    <SolidColorBrush x:Key="TextColor" Color="#dedede"/>
+
+    <!-- Monitor -->
+    <SolidColorBrush x:Key="ProgressBarBackground" Color="#3b3b3b"/>
+    <SolidColorBrush x:Key="ProgressBarForeground" Color="#43612c"/>
+
+    <!-- Settings.xaml -->
+</ResourceDictionary>
