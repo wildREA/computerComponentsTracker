@@ -59,8 +59,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a software application made with .NET as a Window Presentation Form (WPF). The purpose of the software is the display hardware statistics. Although, I realized that I had accidentally made a Task Manager version 2.0.
-Since this is my project, it's of course a better version of Microsoft's poor Task Manager.
+This is a software application made with .NET as a Window Presentation Form (WPF). The purpose of the software is to display hardware statistics. Although, I realized that I had accidentally made a Task Manager version 2.0.
+Since this is my project, it's of course a better version of Microsoft's Task Manager.
 
 Features:
 * All values are displayed in their correct and common formats when looking at their types. (E.g. network usage; sent and received bytes are mostly looked at in MB/s or KB/s.)
@@ -124,30 +124,31 @@ The native way to use the software is simply visually. Any other features are no
 
 - [x] Add Readme
 - [x] Add Releases
-- [/] Add Network Usage options;
+- [ ] Add Network Usage options;
     - [X] Auto (Selects first found active network interface adapter.)
     - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
 - [x] Add GPU Usage Tracker
 - [ ] Add Light/Dark mode (likely remember setting)
-- [ ] Multi-language Support
-    - [ ] (Arabic) العربية
-    - [ ] (Persian) فارسی
-    - [ ] Deutsch (German)
-    - [ ] Ελληνικά (Greek)
-    - [/] English (UK; if possible)
-    - [ ] Français (French)
-    - [ ] (Hebrew) עברית
-    - [ ] हिंदी (Hindi)
-    - [ ] Italiano (Italian)
-    - [ ] 日本語 (Japanese)
-    - [ ] Lietuvių (Lithuanian)
-    - [ ] Polski (Polish)
-    - [ ] Português (Brasileiro) (Portuguese - Brazilian)
-    - [ ] Русский (Russian)
-    - [ ] ภาษาไทย (Thai)
-    - [ ] Türkçe (Turkish)
-    - [ ] 中文 (Chinese)
-    - [ ] (Lebanese) لبناني
+- [x] Multi-language Support
+    - [x] (Arabic) العربية
+    - [x] (Persian) فارسی
+    - [x] Deutsch (German)
+    - [x] Ελληνικά (Greek)
+    - [x] English (American)
+    - [x] Français (French)
+    - [x] (Hebrew) עברית
+    - [x] हिंदी (Hindi)
+    - [x] Italiano (Italian)
+    - [x] 日本語 (Japanese)
+    - [x] Lietuvių (Lithuanian)
+    - [x] Nederlands (Dutch)
+    - [x] 普通话 (Mandarin)
+    - [x] Polski (Polish)
+    - [x] Português (Brasileiro) (Portuguese - Brazilian)
+    - [x] Русский (Russian)
+    - [x] ภาษาไทย (Thai)
+    - [x] Türkçe (Turkish)
+    - [x] (Lebanese) لبناني
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
