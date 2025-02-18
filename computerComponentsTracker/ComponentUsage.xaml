@@ -19,11 +19,13 @@
         <ProgressBar x:Name="cpuProgressBar" Minimum="0" Maximum="100" Height="20" Width="280" Margin="100,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
-                    <Setter Property="Foreground" Value="LimeGreen"/>
+                    <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ProgressBarForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=ProgressBarBackground}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=BorderBrush}"/>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
-        <TextBlock x:Name="cpuUsageLabel" Margin="20,52,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="cpuUsageLabel" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="20,52,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- GPU Usage -->
         <Grid Margin="0,0,50,0">
@@ -32,11 +34,13 @@
         <ProgressBar x:Name="gpuProgressBar" Height="20" Width="280" Margin="100,110,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
-                    <Setter Property="Foreground" Value="LimeGreen"/>
+                    <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ProgressBarForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=ProgressBarBackground}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=BorderBrush}"/>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
-        <TextBlock x:Name="gpuUsageLabel" Margin="20,112,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="gpuUsageLabel" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="20,112,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- RAM Usage -->
         <Grid Margin="0,0,50,0">
@@ -45,11 +49,13 @@
         <ProgressBar x:Name="ramProgressBar" Height="20" Width="280" Margin="100,170,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
-                    <Setter Property="Foreground" Value="LimeGreen"/>
+                    <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ProgressBarForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=ProgressBarBackground}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=BorderBrush}"/>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
-        <TextBlock x:Name="ramUsageLabel" Margin="20,172,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="ramUsageLabel" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="20,172,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Disk Usage -->
         <Grid Margin="0,0,60,0">
@@ -58,33 +64,40 @@
         <ProgressBar x:Name="diskProgressBar" Height="20" Width="280" Margin="100,230,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
-                    <Setter Property="Foreground" Value="LimeGreen"/>
+                    <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ProgressBarForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=ProgressBarBackground}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=BorderBrush}"/>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
-        <TextBlock x:Name="diskUsageLabel" Margin="20,232,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="diskUsageLabel" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="20,232,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Battery Level -->
         <TextBlock Text="{DynamicResource Battery}" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="-255,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
         <ProgressBar x:Name="batteryProgressBar" Height="20" Width="280" Margin="100,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
+                    <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ProgressBarForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=ProgressBarBackground}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=BorderBrush}"/>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
-        <TextBlock x:Name="batteryLabel" Margin="20,292,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="batteryLabel" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="20,292,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Network Usage -->
         <TextBlock Text="{DynamicResource NetworkAdapter}" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="-307,350,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
         <ProgressBar x:Name="networkProgressBar" Height="20" Width="280" Margin="100,350,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ProgressBar.Style>
                 <Style TargetType="ProgressBar">
-                    <Setter Property="Foreground" Value="LimeGreen"/>
+                    <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ProgressBarForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource ResourceKey=ProgressBarBackground}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=BorderBrush}"/>
                 </Style>
             </ProgressBar.Style>
         </ProgressBar>
-        <TextBlock x:Name="networkLabel" Margin="20,352,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
-        <TextBlock x:Name="networkInterfaceNameActive" Margin="0,375,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="networkLabel" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="20,352,-70,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBlock x:Name="networkInterfaceNameActive" Foreground="{DynamicResource ResourceKey=TextColor}" Margin="0,375,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
 
         <TextBlock Text="{DynamicResource Notice}" Foreground="#7a7a7a" Margin="0,0,0,15" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14"/>
     </Grid>

@@ -4,14 +4,16 @@
     <!-- Standard -->
     <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
     <SolidColorBrush x:Key="HoverColor" Color="#bee6fd"/>
-    <SolidColorBrush x:Key="BorderBrush" Color="#708ab8"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#b3b4b5"/>
 
     <!-- MainWindow -->
     <SolidColorBrush x:Key="WindowBackground" Color="White"/>
     <SolidColorBrush x:Key="PanelBackground" Color="#f7f7f7"/>
     <SolidColorBrush x:Key="TextColor" Color="Black"/>
 
-    <!-- Strings.xaml -->
-
+    <!-- Monitor -->
+    <SolidColorBrush x:Key="ProgressBarBackground" Color="#e6e6e6"/>
+    <SolidColorBrush x:Key="ProgressBarForeground" Color="LimeGreen"/>
+    
     <!-- Settings.xaml -->
 </ResourceDictionary>
