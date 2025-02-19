@@ -112,7 +112,10 @@ The native way to use the software is simply visually. Any other features are no
 <br />
 <div align="center">
   <a href="https://github.com/wildREA/computerComponentsTracker">
-    <img src="images/screenshot_showcase.jpg" alt="Logo" width="auto" height="auto">
+    <img src="images/screenshot_light_showcase.jpg" alt="Logo" width="auto" height="auto">
+  </a>
+  <a href="https://github.com/wildREA/computerComponentsTracker">
+    <img src="images/screenshot_dark_showcase.jpg" alt="Logo" width="auto" height="auto">
   </a>
 </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
