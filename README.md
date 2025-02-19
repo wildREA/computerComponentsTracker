@@ -127,11 +127,11 @@ The native way to use the software is simply visually. Any other features are no
 
 - [x] Add Readme
 - [x] Add Releases
-- [ ] Add Network Usage options;
+- [x] Add Network Usage options;
     - [X] Auto (Selects first found active network interface adapter.)
-    - [ ] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
+    - [x] Selective (User can select which of found interface adapters; by software, to choose from) - report any issues in the future regarding iteration logic
 - [x] Add GPU Usage Tracker
-- [ ] Add Light/Dark mode (likely remember setting)
+- [x] Add Light/Dark mode (likely remember setting)
 - [x] Multi-language Support
     - [x] (Arabic) العربية
     - [x] (Persian) فارسی
