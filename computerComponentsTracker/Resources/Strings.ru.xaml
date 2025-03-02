@@ -27,7 +27,7 @@
 	<sys:String x:Key="LightTheme">Светлая</sys:String>
 	<sys:String x:Key="DarkTheme">Тёмная</sys:String>
 	<sys:String x:Key="ArabicSaudiLanguage">Арабский</sys:String>
-	<sys:String x:Key="FarsiIraqLanguage">Фарси</sys:String>
+	<sys:String x:Key="FarsiIraqLanguage">Персия</sys:String>
 	<sys:String x:Key="GermanLanguage">Немецкий</sys:String>
 	<sys:String x:Key="GreekLanguage">Греческий</sys:String>
 	<sys:String x:Key="EnglishLanguage">Английский</sys:String>
